@@ -16,7 +16,7 @@ from tqdm import tqdm
 from sklearn.metrics import classification_report
 from collections import defaultdict
 
-greedy=False
+greedy=True
 dynamic_hotwords=False
 
 def calc_entity_metrics(true_entities, pred_entities):

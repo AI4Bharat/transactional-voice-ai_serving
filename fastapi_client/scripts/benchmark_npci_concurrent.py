@@ -190,7 +190,6 @@ if __name__ == "__main__":
     # df.sort_values("audio_lens", inplace=True)
     # batches = batchify(sorted(raw_audio_data, key=len), batch_size=args.batchsize)
     
-
     results_transcript = list()
     results_transcript_itn = list()
     results_intent = list()
