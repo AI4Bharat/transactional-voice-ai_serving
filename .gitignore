@@ -2,7 +2,6 @@
 triton_client/data/
 fastapi_client/data/
 logs
-!en.wav
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
