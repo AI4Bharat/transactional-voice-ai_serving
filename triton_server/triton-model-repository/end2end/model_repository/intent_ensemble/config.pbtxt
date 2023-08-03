@@ -1,0 +1,64 @@
+name: "intent_ensemble"
+platform: "ensemble"
+max_batch_size: 64
+
+input {
+    name: "input_text"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+}
+
+output {
+    name: "labels"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+}
+
+ensemble_scheduling {
+  step [
+    {
+      model_name: "intent_preprocessor"
+      model_version: 1
+      input_map {  
+            key: "input_text"
+            value: "input_text"
+      }
+      output_map {  
+            key: "input_ids"
+            value: "input_ids"
+      }
+      output_map {  
+            key: "attention_mask"
+            value: "attention_mask"
+      }
+    },
+    {
+      model_name: "intent_model_onnx"
+      model_version: 1
+      input_map {
+        key: "input_ids"
+        value: "input_ids"
+      }
+      input_map {
+        key: "attention_mask"
+        value: "attention_mask"
+      }
+      output_map {
+      key: "logits"
+      value: "logits"
+      }
+    },
+    {
+      model_name: "intent_postprocessor"
+      model_version: 1
+      input_map {
+          key: "logits"
+          value: "logits"
+      }
+      output_map {
+          key: "labels"
+          value: "labels"
+      }
+    }
+  ]
+}

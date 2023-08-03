@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./fastapi_server
+    restart: always
+    command: uvicorn main:api --host 0.0.0.0 --port 8008 --log-level info --root-path /api --workers 32
+    environment:
+      - STANDARD_SAMPLING_RATE
+      - STANDARD_BATCH_SIZE
+      - INFERENCE_SERVER_HOST
+      - DEFAULT_API_KEY_VALUE
+      - ENABLE_LOGGING
+      - AZURE_STORAGE_ACCESS_KEY
+      - AZURE_BLOB_STORE_NAME
+      - AZURE_BLOB_CONTAINER
+    ports:
+      - 8008:8008
+    depends_on:
+      - triton
+    volumes:
+      - ./fastapi_server:/app
+
+  triton:
+    build: 
+      context: ./triton_server
+      shm_size: '16gb'
+    restart: always
+    command: tritonserver --model-repository=/models/model_repository --log-file=/logs/log.txt
+    environment:
+      - TRITON_LOG_FILE
+    expose:
+      - 8000
+      - 8001
+    ports:
+      - 8002:8002
+    volumes:
+      - ./triton_server/triton-model-repository/end2end/model_repository:/models/model_repository
+      - ${TRITON_LOG_FILE}:/logs/
+    shm_size: '16gb'
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]

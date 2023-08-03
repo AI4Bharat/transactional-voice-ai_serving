@@ -1,0 +1,10 @@
+python-dotenv
+fastapi
+uvicorn
+tritonclient[all]
+soundfile
+numpy
+scipy
+pydub
+shortuuid
+azure-storage-blob

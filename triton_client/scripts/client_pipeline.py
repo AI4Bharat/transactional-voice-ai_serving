@@ -1,0 +1,88 @@
+# python client_pipeline.py /home/npci/NPCI/asr_pipeline/data/valid_data/manifest_new.json 8
+import pandas as pd
+import json
+import sys
+import tritonclient.http as http_client
+import math
+import numpy as np
+from tqdm import tqdm
+import librosa
+
+file_name = sys.argv[1]
+batch_size = int(sys.argv[2])
+greedy=False
+dynamic_hotwords=True
+
+with open(file_name) as f:
+    txt_file = f.readlines()
+df = pd.DataFrame([json.loads(l.strip()) for l in txt_file])
+
+def pad_batch(batch_data):
+    batch_data_lens = np.asarray([len(data) for data in batch_data], dtype=np.int32)
+    max_length = max(batch_data_lens)
+    batch_size = len(batch_data)
+    padded_zero_array = np.zeros((batch_size,max_length),dtype=np.float32)
+    for idx, data in enumerate(batch_data):
+        padded_zero_array[idx,0:batch_data_lens[idx]] = data
+
+    return padded_zero_array, np.reshape(batch_data_lens,[-1,1])
+
+def load_wav(path):
+    audio, sr = librosa.load(path, sr=16000)
+    return audio
+def batchify(arr, batch_size=1):
+    num_batches = math.ceil(len(arr) / batch_size)
+    return [arr[i*batch_size:(i+1)*batch_size] for i in range(num_batches)]
+
+fnames = df["audio_filepath"].tolist()
+raw_audio_data = [load_wav(fname) for fname in fnames]
+batches = batchify(raw_audio_data, batch_size=batch_size)
+
+triton_http_client = http_client.InferenceServerClient(
+    url="localhost:8000"
+)
+
+references = df["text"].tolist()
+predictions = []
+for i in tqdm(range(len(batches))):
+    if batch_size == 1:
+        audio_signal = np.array(batches[i])
+        audio_len = np.asarray([[len(audio_signal[0])]], dtype=np.int32)
+    else:
+        audio_signal, audio_len = pad_batch(batches[i])
+
+    input0 = http_client.InferInput("AUDIO_SIGNAL", audio_signal.shape, "FP32")
+    input0.set_data_from_numpy(audio_signal)
+    input1 = http_client.InferInput("NUM_SAMPLES", audio_len.shape, "INT32")
+    input1.set_data_from_numpy(audio_len.astype('int32'))
+    output0 = http_client.InferRequestedOutput('TRANSCRIPTS_ASR')
+    output1 = http_client.InferRequestedOutput('TRANSCRIPTS_ITN')
+    output2 = http_client.InferRequestedOutput('LABELS_INTENT')
+    output3 = http_client.InferRequestedOutput('JSON_ENTITY')
+    outputs=[output0, output1, output2, output3]
+    
+    if greedy:
+        inputs = [input0, input1]
+        response = triton_http_client.infer("pipeline_greedy_ensemble_EN", model_version='1',inputs=inputs, request_id=str(1), outputs=outputs)
+    else:
+        if dynamic_hotwords:
+            hotword_list=["rupees"]
+            input2 = http_client.InferInput("HOTWORD_LIST", [len(audio_len),len(hotword_list)], "BYTES")
+            input2.set_data_from_numpy(np.array([hotword_list*len(audio_len)]).astype('object').reshape([len(audio_len),-1]))
+            input3 = http_client.InferInput("HOTWORD_WEIGHT", [len(audio_len),1], "FP32")
+            input3.set_data_from_numpy(np.array([[10.]*len(audio_len)], dtype=np.float32).reshape([len(audio_len),-1]))
+            inputs = [input0, input1, input2, input3]
+        else:
+            inputs = [input0, input1]
+        response = triton_http_client.infer("pipeline_pyctc_ensemble_EN", model_version='1',inputs=inputs, request_id=str(1), outputs=outputs)
+
+    result_response = response.get_response()
+    batch_result_asr = response.as_numpy("TRANSCRIPTS_ASR")
+    batch_result_asr_itn = response.as_numpy("TRANSCRIPTS_ITN")
+    batch_result_intent = response.as_numpy('LABELS_INTENT')
+    batch_result_entity = response.as_numpy('JSON_ENTITY')
+    
+    for j,b in enumerate(batch_result_asr):
+        print(references[i*batch_size+j], "||", b[0].decode("utf-8"), "{{" ,batch_result_intent[j][0].decode("utf-8"), "}}")
+        print(json.loads(batch_result_entity[j][0].decode("utf-8")))
+        predictions.append(b[0].decode("utf-8"))
