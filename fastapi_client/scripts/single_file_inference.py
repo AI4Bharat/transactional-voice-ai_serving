@@ -51,6 +51,6 @@ if __name__ == "__main__":
     LANG_CODE = "en"
     ALLOW_LOGGING_ON_SERVER = True
 
-    client = Client(api_key=API_KEY, consent_for_data_tracking=ALLOW_LOGGING_ON_SERVER)
+    client = Client(api_key=API_KEY, consent_for_data_tracking=ALLOW_LOGGING_ON_SERVER, inference_url="http://localhost:8008/inference")
     result = client.run_inference(audio_path=FILENAME, src_lang_code=LANG_CODE)
     print(result)

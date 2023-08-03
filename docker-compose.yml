@@ -33,6 +33,8 @@ services:
       - 8000
       - 8001
     ports:
+      - 8000:8000
+      - 8001:8001
       - 8002:8002
     volumes:
       - ./triton_server/triton-model-repository/end2end/model_repository:/models/model_repository

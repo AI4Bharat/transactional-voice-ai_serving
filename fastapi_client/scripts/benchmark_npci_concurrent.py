@@ -117,7 +117,9 @@ def send_request(audio):
             "audioContent": audio
         }
     ]
-    inference_url = "https://demo.npci.ai4bharat.org/api/inference"
+    # inference_url = "https://demo.npci.ai4bharat.org/api/inference"
+    inference_url = "http://localhost:8008/inference"
+    
     control_config = {
         "dataTracking": False,
     }
