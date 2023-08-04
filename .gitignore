@@ -2,6 +2,7 @@
 triton_client/data/
 fastapi_client/data/
 logs
+export/models/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

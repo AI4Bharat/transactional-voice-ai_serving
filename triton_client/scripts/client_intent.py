@@ -30,7 +30,7 @@ headers["Authorization"] = f"Bearer GougU6OLYC64cAJH4wbjSMOUbh6cidmg"
 health_ctx = triton_client.is_server_ready(headers=headers)
 print("Is server ready - {}".format(health_ctx))
 
-sent_list = ["transfer 100 rupees", "recharge electricity"]
+sent_list = ["transfer 100 rupees", "ट्रांसफर वन रुपी टू मोबाइल नंबर नाइन थ्री सेवन टू वन नाइन वन फाइव सेवन वन फॉर एटी एट"]
 start_time = time.time()
 input0 = http_client.InferInput("input_text", [2, 1], "BYTES")
 input0_data = np.array([sent.encode('utf-8') for sent in sent_list], dtype=np.object_).reshape([2,1])

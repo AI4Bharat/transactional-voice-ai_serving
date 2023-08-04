@@ -1,4 +1,4 @@
-name: "pipeline_greedy_ensemble_EN"
+name: "pipeline_pyctc_ensemble_HI"
 platform: "ensemble"
 max_batch_size: 32 #MAX_BATCH
 input {
@@ -10,6 +10,18 @@ input {
     name: "NUM_SAMPLES"
     data_type: TYPE_INT32
     dims: [ 1 ]
+}
+input {
+    name: "HOTWORD_LIST"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+    optional: true
+}
+input {
+    name: "HOTWORD_WEIGHT"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+    optional: true
 }
 
 output {
@@ -36,7 +48,6 @@ output {
   dims: [1]
 }
 
-
 ensemble_scheduling {
  step [
    {
@@ -60,7 +71,7 @@ ensemble_scheduling {
     } 
   },
   {
-    model_name: "asr_am_EN"
+    model_name: "asr_am_HI"
     model_version: -1
     input_map {
       key: "audio_signal"
@@ -75,36 +86,28 @@ ensemble_scheduling {
       value: "logits_am"
     }
   },
- {
-  model_name: "asr_greedy_top1"
-  model_version: -1
-  input_map {
-   key: "CLASS_LOGITS__0"
-   value: "logits_am"
-  }
-  output_map {
-   key: "CANDIDATE_TRANSCRIPT__0"
-   value: "TRANSCRIPT_ID"
-  }
- },
- {
-  model_name: "asr_greedy_decoder_EN"
-  model_version: -1
-  input_map {
-   key: "TRANSCRIPT_ID"
-   value: "TRANSCRIPT_ID"
-  }
-  input_map {
-   key: "NUM_TIME_STEPS"
-   value: "NUM_TIME_STEPS"
-  }
-  output_map {
-   key: "TRANSCRIPT"
-   value: "TRANSCRIPTS_ASR"
-  }
- },
+  {
+    model_name: "asr_pyctc_decoder_HI"
+    model_version: -1
+    input_map {
+      key: "LOG_PROBS"
+      value: "logits_am"
+    }
+    input_map {
+        key: "HOTWORD_LIST"
+        value: "HOTWORD_LIST"
+    }
+    input_map {
+        key: "HOTWORD_WEIGHT"
+        value: "HOTWORD_WEIGHT"
+    }
+    output_map {
+        key: "TRANSCRIPT"
+        value: "TRANSCRIPTS_ASR"
+    }
+  },
    {
-  model_name: "itn_EN"
+  model_name: "itn_HI"
   model_version: -1
   input_map {
    key: "INPUT_TEXT"
@@ -160,7 +163,7 @@ ensemble_scheduling {
       }
     },
     {
-      model_name: "entity_EN"
+      model_name: "entity_HI"
       model_version: -1
       input_map {
           key: "input_text"

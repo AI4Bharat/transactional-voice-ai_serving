@@ -1,4 +1,4 @@
-from inverse_text_normalization.en.run_predict import inverse_normalize_text as en_itn
+from inverse_text_normalization.hi.run_predict import inverse_normalize_text as hi_itn
 import triton_python_backend_utils as pb_utils
 import numpy as np
 import json
@@ -38,8 +38,8 @@ def format_numbers_with_commas(sent, lang):
 
 def inverse_normalize_text(text_list):
     try:
-        itn_results = en_itn(text_list)
-        text_list = [format_numbers_with_commas(sent=sent, lang='en') for sent in itn_results]
+        itn_results = hi_itn(text_list)
+        text_list = [format_numbers_with_commas(sent=sent, lang='hi') for sent in itn_results]
     except Exception as e:
         print(e)
     return text_list

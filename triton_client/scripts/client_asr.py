@@ -20,7 +20,7 @@ greedy=False
 dynamic_hotwords=True
 
 with open(file_name) as f:
-    txt_file = f.readlines()
+    txt_file = f.readlines()[:100]
 df = pd.DataFrame([json.loads(l.strip()) for l in txt_file])
 
 def pad_batch(batch_data):
@@ -69,7 +69,7 @@ for i in tqdm(range(len(batches))):
     
     if greedy:
         inputs = [input0, input1]
-        response = triton_http_client.infer("asr_greedy_ensemble_EN", model_version='1',inputs=inputs, request_id=str(1), outputs=[output0],)
+        response = triton_http_client.infer("asr_greedy_ensemble_HI", model_version='1',inputs=inputs, request_id=str(1), outputs=[output0],)
     else:
         if dynamic_hotwords:
             hotword_list=["rupees"]
@@ -80,7 +80,7 @@ for i in tqdm(range(len(batches))):
             inputs = [input0, input1, input2, input3]
         else:
             inputs = [input0, input1]
-        response = triton_http_client.infer("asr_pyctc_ensemble_EN", model_version='1',inputs=inputs, request_id=str(1), outputs=[output0],)
+        response = triton_http_client.infer("asr_pyctc_ensemble_HI", model_version='1',inputs=inputs, request_id=str(1), outputs=[output0],)
     
     result_response = response.get_response()
     batch_result_asr = response.as_numpy("TRANSCRIPTS")

@@ -1,4 +1,4 @@
-name: "asr_greedy_ensemble_EN"
+name: "asr_greedy_ensemble_HI"
 platform: "ensemble"
 max_batch_size: 32 #MAX_BATCH
 input {
@@ -40,7 +40,7 @@ ensemble_scheduling {
   } 
  },
  {
-  model_name: "asr_am_EN"
+  model_name: "asr_am_HI"
   model_version: -1
   input_map {
    key: "audio_signal"
@@ -69,7 +69,7 @@ ensemble_scheduling {
   }
  },
  {
-  model_name: "asr_greedy_decoder_EN"
+  model_name: "asr_greedy_decoder_HI"
   model_version: -1
   input_map {
    key: "TRANSCRIPT_ID"

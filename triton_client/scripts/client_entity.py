@@ -41,7 +41,7 @@ else:
     inputs = [input0]
 
 output0 = http_client.InferRequestedOutput('entities')
-response = triton_client.infer("entity_EN", model_version='1', inputs=inputs,\
+response = triton_client.infer("entity_HI", model_version='1', inputs=inputs,\
     request_id=str(1), outputs=[output0])
 result_response = response.get_response()
 encoded_result = response.as_numpy('entities')

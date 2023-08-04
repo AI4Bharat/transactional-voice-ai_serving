@@ -47,8 +47,8 @@ class Client:
 
 if __name__ == "__main__":
     API_KEY = "sample_secret_key_for_demo"
-    FILENAME = "../en.wav"
-    LANG_CODE = "en"
+    FILENAME = "../hi.wav"
+    LANG_CODE = "hi"
     ALLOW_LOGGING_ON_SERVER = True
 
     client = Client(api_key=API_KEY, consent_for_data_tracking=ALLOW_LOGGING_ON_SERVER, inference_url="http://localhost:8008/inference")

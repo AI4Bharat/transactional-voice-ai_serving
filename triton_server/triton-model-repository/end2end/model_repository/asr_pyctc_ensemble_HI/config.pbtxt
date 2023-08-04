@@ -1,0 +1,93 @@
+name: "asr_pyctc_ensemble_HI"
+platform: "ensemble"
+max_batch_size: 32 #MAX_BATCH
+input {
+  name: "AUDIO_SIGNAL"
+  data_type: TYPE_FP32
+  dims: -1#AUDIO_LENGTH
+}
+input {
+    name: "NUM_SAMPLES"
+    data_type: TYPE_INT32
+    dims: [ 1 ]
+}
+input {
+    name: "HOTWORD_LIST"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+    optional: true
+}
+input {
+    name: "HOTWORD_WEIGHT"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+    optional: true
+}
+
+output {
+  name: "TRANSCRIPTS"
+  data_type: TYPE_STRING
+  dims: [ 1 ]
+}
+
+ensemble_scheduling {
+ step [
+   {
+    model_name: "asr_preprocessor"
+    model_version: -1
+    input_map {
+      key: "AUDIO_SIGNAL__0"
+      value: "AUDIO_SIGNAL"
+    }
+    input_map {
+      key: "NUM_SAMPLES__1"
+      value: "NUM_SAMPLES"
+    }
+    output_map {
+      key: "AUDIO_FEATURES__0"
+      value: "audio_features"
+    } 
+    output_map {
+      key: "NUM_TIME_STEPS__1"
+      value: "NUM_TIME_STEPS"
+    } 
+  },
+  {
+    model_name: "asr_am_HI"
+    model_version: -1
+    input_map {
+      key: "audio_signal"
+      value: "audio_features"
+    }
+	input_map {
+	    key: "length"
+	    value: "NUM_TIME_STEPS"
+	}
+    output_map {
+      key: "logprobs"
+      value: "logits"
+    }
+  },
+  {
+    model_name: "asr_pyctc_decoder_HI"
+    model_version: -1
+    input_map {
+      key: "LOG_PROBS"
+      value: "logits"
+    }
+    input_map {
+        key: "HOTWORD_LIST"
+        value: "HOTWORD_LIST"
+    }
+    input_map {
+        key: "HOTWORD_WEIGHT"
+        value: "HOTWORD_WEIGHT"
+    }
+    output_map {
+      key: "TRANSCRIPT"
+      value: "TRANSCRIPTS"
+    }
+  }
+ ]
+}
+

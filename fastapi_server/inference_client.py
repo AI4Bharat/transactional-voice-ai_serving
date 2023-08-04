@@ -7,30 +7,8 @@ from utils import pad_batch
 class InferenceClient:
     def __init__(self, server_host: str) -> None:
         self._client = grpc_client.InferenceServerClient(url=server_host, verbose=False)
-        # if not self._client.is_server_ready():
-        #     print(f"WARNING: Unable to connect to Triton server @ {server_host}")
 
     def run_batch_inference(self, batch: list, lang_code: str, batch_size:int = 1) -> list:
-        # audio_signal, audio_len = pad_batch(batch)
-        # input0 = grpc_client.InferInput("AUDIO_SIGNAL", audio_signal.shape, "FP32")
-        # input0.set_data_from_numpy(audio_signal)
-        # input1 = grpc_client.InferInput("NUM_SAMPLES", audio_len.shape, "INT32")
-        # input1.set_data_from_numpy(audio_len.astype('int32'))
-
-        # input2 = grpc_client.InferInput("LANG_ID", audio_len.shape, "BYTES")
-        # lang_id = [lang_code] * len(audio_len)
-        # input2.set_data_from_numpy(np.asarray(lang_id).astype('object').reshape(audio_len.shape))
-        
-        # output0 = grpc_client.InferRequestedOutput('TRANSCRIPT')
-        # response = self._client.infer("asr", model_version='1', inputs=[input0, input1, input2], outputs=[output0])
-        # result_response = response.get_response()
-        # batch_result = response.as_numpy("TRANSCRIPT")
-
-        # results_json = []
-        # for item_index, b in enumerate(batch_result):
-        #     result_json = json.loads(b.decode("utf-8"))
-        #     results_json.append(result_json)
-        # return results_json
         if batch_size == 1:
             audio_signal = np.array(batch)
             audio_len = np.asarray([[len(audio_signal[0])]], dtype=np.int32)
@@ -50,6 +28,8 @@ class InferenceClient:
         
         if lang_code == "en":
             response = self._client.infer("pipeline_pyctc_ensemble_EN", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
+        elif lang_code == "hi":
+            response = self._client.infer("pipeline_pyctc_ensemble_HI", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
 
         _ = response.get_response()
                 
