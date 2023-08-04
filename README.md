@@ -24,7 +24,7 @@
 git clone https://github.com/AI4Bharat/transactional-voice-ai_serving.git
 cd transactional-voice-ai_serving
 ```
-> Copy (and modify) `.env` file:
+> Copy (and modify, if required) `.env` file:
 ```
 cp .env.example .env
 ```
