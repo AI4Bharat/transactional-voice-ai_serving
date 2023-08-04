@@ -15,7 +15,7 @@
 > Make sure that the system have NVIDIA GPU card(s) and corresponding drivers installed.
 
 - Docker (and Docker Compose) - Follow steps outlined [here](https://docs.docker.com/engine/install/).
-- Install `nvidia-container-toolkit` - [Official Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#docker) *(Note: it also contains stepson how to install Docker too!)*
+- Install `nvidia-container-toolkit` - [Official Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#docker) *(Note: it also contains steps on how to install Docker too!)*
 
 ## Setup
 
