@@ -177,9 +177,8 @@ python benchmark_npci_concurrent.py --gt-file ../data/en/npci_pipeline_benchmark
 
 ### Runtime Statistics -
 
->*Setup* - **Single** instance of all the models loaded in GPU memory using Triton Inference Server.  
+>*Setup1* - **Single** instance of all the models loaded in GPU memory using Triton Inference Server, except for Pyctcdecode CPU module (8 instances)
 
-_Note: Triton's pyctcdecode module has multiple CPU instances._
 
 | Lang | Hardware Type | Avg. GPU VRAM usage (GB) | Avg. GPU utilization | Avg. CPU RAM usage(GB) | Avg. CPU utilization | Total Time taken (s)/samples | Avg Latency (s) | Avg Throughput (RPS) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -190,6 +189,14 @@ _Note: Triton's pyctcdecode module has multiple CPU instances._
 | ta | **A100-80GB,** 16-core-110GB | 14.6 | 5.45 | 22.23 | 44.84 | 172/665 | 1.91 | 3.52 |
 | ta | **T4-16GB,** 4-core-28GB | 6.15 | 11.4 | 24.49 | 93.22 | 381/665 | 4.77 | 1.63 |   
 
+>*Setup2* - **Two** instances of all the models loaded in GPU memory using Triton Inference Server, except for Pyctcdecode CPU module (8 instances)
+
+| Lang | Hardware Type | Avg. GPU VRAM usage (GB) | Avg. GPU utilization | Avg. CPU RAM usage(GB) | Avg. CPU utilization | Total Time taken (s)/samples | Avg Latency (s) | Avg Throughput (RPS) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| en | **A100-80GB,** 16-core-110GB | 13.3 | 11.35 | 25.04 | 51.86 | 273/2584 | 1.89 | 8.84 |
+| hi | **A100-80GB,** 16-core-110GB | 17.1 | 10.94 | 26.7 | 25.6 | 968/4411 | 1.86 | 8.35 |
+| ta | **A100-80GB,** 16-core-110GB | 13.3 | 6.3 | 24.73 | 53.91 | 147/665 | 3.22 | 4.09 |
+
 > For higher throughput values, increase the count of `instance_group` in Triton's configuration or/and scale horizontally.
 
-_Above stats are for the end-to-end system including the FastAPI wrapper on top of Triton server._
+_Note: All the stats are for the end-to-end system including the FastAPI wrapper on top of Triton server._
