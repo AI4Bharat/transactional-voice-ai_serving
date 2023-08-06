@@ -1,0 +1,42 @@
+name: "asr_pyctc_decoder_TA"
+backend: "python"
+max_batch_size: 32
+input [
+  {
+    name: "LOG_PROBS"
+    data_type: TYPE_FP32
+    dims: [ -1, -1 ]
+  },
+  {
+    name: "HOTWORD_LIST"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+    optional: true
+  },
+  {
+    name: "HOTWORD_WEIGHT"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+    optional: true
+  }
+]
+
+output [
+  {
+    name: "TRANSCRIPT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+    reshape: { shape: [ ] }
+  }
+]
+
+dynamic_batching { }
+
+instance_group [
+  { 
+    count: 8
+    kind: KIND_CPU 
+  }
+]
+
+parameters: { key: "FORCE_CPU_ONLY_INPUT_TENSORS" value: {string_value:"no"}}

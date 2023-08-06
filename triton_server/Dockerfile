@@ -20,7 +20,8 @@ RUN pip uninstall -y onnxruntime && pip install --no-cache-dir onnxruntime-gpu==
 RUN git clone https://github.com/AI4Bharat/indic-punct.git && cd indic-punct && git checkout deployment && bash install.sh && pip install --no-cache-dir pynini && python setup.py bdist_wheel && pip install -e .
 RUN pip install pyyaml accelerate protobuf https://github.com/kpu/kenlm/archive/master.zip transformers -U
 RUN pip install protobuf==3.20 
-RUN cd indic-punct && git pull && git checkout transactional-voice-ai
+ARG INDICPUNCT_COMMIT_HASH
+RUN cd indic-punct && git pull && git checkout $INDICPUNCT_COMMIT_HASH
 CMD tritonserver --model-repository=/models/model_repository
 EXPOSE 8001
 EXPOSE 8002

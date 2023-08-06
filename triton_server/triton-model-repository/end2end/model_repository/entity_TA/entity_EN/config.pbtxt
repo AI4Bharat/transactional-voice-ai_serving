@@ -1,0 +1,31 @@
+name: "entity_EN"
+backend: "python"
+max_batch_size: 64
+input [
+{
+    name: "input_text"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+},
+{
+    name: "input_text_itn"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+    optional: true
+}
+]
+output {
+    name: "entities"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+    reshape: { shape: [ ] }
+}
+
+  
+instance_group [
+    { 
+    count: 1
+    kind: KIND_CPU 
+    }
+]
+

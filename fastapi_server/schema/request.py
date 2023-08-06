@@ -6,12 +6,14 @@ from .common import Audio, AudioFormat, Language
 class AudioConfig(BaseModel):
     audioFormat: AudioFormat
     language: Language
-    encoding: Optional[str] = "base64"
+    samplingRate: Optional[int] = 16000
+    postProcessors: Optional[List[str]] = []
+    # encoding: Optional[str] = "base64"
 
-class ControlConfig(BaseModel):
-    dataTracking: bool = True
+# class ControlConfig(BaseModel):
+#     dataTracking: bool = True
 
 class InferenceRequest(BaseModel):
     audio: List[Audio]
     config: AudioConfig
-    controlConfig: Optional[ControlConfig] = ControlConfig()
+    # controlConfig: Optional[ControlConfig] = ControlConfig()

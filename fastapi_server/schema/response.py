@@ -1,27 +1,27 @@
 from typing import List, Optional
 from pydantic import BaseModel
 
-class Transcript(BaseModel):
-    raw: str
-    itn: str
+# class Transcript(BaseModel):
+#     raw: str
+#     itn: str
 
-class Intent(BaseModel):
-    recommended_tag: str
-    original_tag: str
-    probability: float
+# class Intent(BaseModel):
+#     recommended_tag: str
+#     original_tag: str
+#     probability: float
 
 class Entity(BaseModel):
-    tag: str
-    substring: str
-    start_index: int
-    end_index: int
-    extracted_value: str
+    entity: str
+    word: str
+    start: int
+    end: int
+    value: str
 
 class InferenceResult(BaseModel):
-    input_id: str
-    transcript: Transcript
-    intent: Intent
-    entities: List[Entity]
+    id: str
+    source: str
+    entities: Optional[List[Entity]] = []
+    intent: Optional[str] = ""
 
 class ResponseStatus(BaseModel):
     success: bool

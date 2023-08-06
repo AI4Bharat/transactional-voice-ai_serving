@@ -1,7 +1,5 @@
 .env
-triton_client/data/
-fastapi_client/data/
-logs
+audio
 export/models/
 
 # Byte-compiled / optimized / DLL files

@@ -25,10 +25,13 @@ services:
     build: 
       context: ./triton_server
       shm_size: '16gb'
+      args:
+        - INDICPUNCT_COMMIT_HASH=${INDICPUNCT_COMMIT_HASH}
     restart: always
-    command: tritonserver --model-repository=/models/model_repository --log-file=/logs/log.txt
+    command: tritonserver --model-repository=/models/model_repository
     environment:
       - TRITON_LOG_FILE
+      - INDICPUNCT_COMMIT_HASH
     expose:
       - 8000
       - 8001

@@ -1,4 +1,4 @@
-# python nemo_to_pt.py ../models/hi/hi-conformer.nemo ../data/hi.wav
+# python nemo_to_pt.py ../models/ta/ta.nemo ../data/ta.wav
 
 import torch
 import nemo.collections.asr as nemo_asr

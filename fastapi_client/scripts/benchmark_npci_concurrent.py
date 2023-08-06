@@ -1,4 +1,6 @@
-# python benchmark_npci_concurrent.py --gt-file /home/npci/NPCI/transactional-voice-ai_serving/fastapi_client/data/npci_pipeline_benchmark/en-benchmark-v0109-fixed.csv --audio-folder /home/npci/NPCI/transactional-voice-ai_serving/fastapi_client/data/npci_pipeline_benchmark/audio --lang en --savefile /home/npci/NPCI/transactional-voice-ai_serving/fastapi_client/data/npci_pipeline_benchmark/results/temp.csv --batchsize 1
+# python benchmark_npci_concurrent.py --gt-file ../data/ta/npci_pipeline_benchmark/ta-benchmark-07-19.csv --audio-folder ../data/ta/npci_pipeline_benchmark/audio --savefile ../data/ta/npci_pipeline_benchmark/results/temp.csv --lang "ta" --batchsize 1
+# python benchmark_npci_concurrent.py --gt-file ../data/hi/npci_pipeline_benchmark/hi-benchmark-v0109-fixed.csv --audio-folder ../data/hi/npci_pipeline_benchmark/audio --savefile ../data/hi/npci_pipeline_benchmark/results/temp.csv --lang "hi" --batchsize 1
+# python benchmark_npci_concurrent.py --gt-file ../data/en/npci_pipeline_benchmark/en-benchmark-v0109-fixed.csv --audio-folder ../data/en/npci_pipeline_benchmark/audio --savefile ../data/en/npci_pipeline_benchmark/results/temp.csv --lang "en" --batchsize 1
 from concurrent.futures import ThreadPoolExecutor
 import os
 import argparse
@@ -12,7 +14,7 @@ import base64
 
 greedy=False
 dynamic_hotwords=False
-
+global lang
 def calc_entity_metrics(true_entities, pred_entities):
     n_TP = defaultdict(lambda: 0)
     n_FP = defaultdict(lambda: 0)
@@ -107,9 +109,10 @@ def retain(true_ent_list):
 def send_request(audio):
     inference_cfg: dict = {
         "language": {
-            "sourceLanguage": "en"
+            "sourceLanguage": lang
         },
         "audioFormat": "wav",
+        "postProcessors": ["tag_entities"]
     }
 
     inference_inputs: dict = [
@@ -117,12 +120,11 @@ def send_request(audio):
             "audioContent": audio
         }
     ]
-    # inference_url = "https://demo.npci.ai4bharat.org/api/inference"
-    inference_url = "http://localhost:8008/inference"
+    inference_url = "http://localhost:8008/api"
     
-    control_config = {
-        "dataTracking": False,
-    }
+    # control_config = {
+    #     "dataTracking": False,
+    # }
     http_headers: dict = {
         "authorization": "sample_secret_key_for_demo",
     }
@@ -132,14 +134,14 @@ def send_request(audio):
         json={
             "config": inference_cfg,
             "audio": inference_inputs,
-            "controlConfig": control_config,
+            # "controlConfig": control_config,
         }
     )
 
     if response.status_code != 200:
         print(f"Request failed with response.text: {response.text[:500]} and status_code: {response.status_code}")
         return {}
-
+    
     return response.json()["output"][0]
     
 
@@ -164,10 +166,12 @@ if __name__ == "__main__":
 
     # Download audio files
     print("Checking audio files")
+    os.makedirs(args.audio_folder, exist_ok=True)
+    os.makedirs(os.path.dirname(args.savefile), exist_ok=True)
     for i, row in tqdm(df.iterrows(), total=len(df)):
         if os.path.isfile(row["audios"]):
             continue
-        download_audio(row["URL"])
+        download_audio(row["URL"], args.audio_folder)
     df = df[df["audios"].apply(os.path.isfile)]
     ##########################################
     # df = df.sample(frac=1)
@@ -195,23 +199,21 @@ if __name__ == "__main__":
     results_intent = list()
     results_entities = list()
     inference_time = 0
-    
+    lang = args.lang
     with ThreadPoolExecutor(max_workers=8) as executor:
         result_responses = list(tqdm(executor.map(send_request, raw_audio_data), total=len(raw_audio_data)))
     
     for response in result_responses:
-        results_transcript.append(response["transcript"]["raw"])
-        results_transcript_itn.append(response["transcript"]["itn"])
-        results_intent.append(response["intent"]["recommended_tag"])
+        results_transcript.append(response["source"])
+        results_intent.append(response["intent"])
         results_entities.append(response["entities"])
 
     print(f"Time to infer {len(df)} samples: {inference_time} s")
 
     df["Transcript"] = results_transcript
-    df["Transcript ITN"] = results_transcript_itn
     df["Pred Intent"] = results_intent
     df["Pred Entities"] = results_entities
-    df["Pred Entities"] = df["Pred Entities"].apply(lambda entities: [f"{ent['tag']}-{ent['extracted_value']}" for ent in entities])
+    df["Pred Entities"] = df["Pred Entities"].apply(lambda entities: [f"{ent['entity']}-{ent['value']}" for ent in entities])
     
     df.drop(columns="audios")
     df.to_csv(args.savefile, index=False)

@@ -30,6 +30,10 @@ class InferenceClient:
             response = self._client.infer("pipeline_pyctc_ensemble_EN", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
         elif lang_code == "hi":
             response = self._client.infer("pipeline_pyctc_ensemble_HI", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
+        elif lang_code == "ta":
+            response = self._client.infer("pipeline_pyctc_ensemble_TA", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
+        elif lang_code == "od":
+            response = self._client.infer("pipeline_pyctc_ensemble_OD", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
 
         _ = response.get_response()
                 
@@ -49,8 +53,6 @@ class InferenceClient:
                 "transcript": result_transcript,
                 "transcript_itn": result_transcript_itn,
                 "intent": result_intent,
-                "intent_orig": result_intent,
-                "intent_prob": "1.0",
                 "entities": result_ner,
                 })
             

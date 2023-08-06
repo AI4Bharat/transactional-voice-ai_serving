@@ -69,10 +69,10 @@ api.add_middleware(
 )
 
 ## API Endpoints ##
-@api.post("/inference", response_model=InferenceResponse)
+@api.post("/api", response_model=InferenceResponse)
 async def inference(request: InferenceRequest, response: Response):
     language = request.config.language.sourceLanguage
-    enable_logging = ENABLE_LOGGING and request.controlConfig.dataTracking
+    enable_logging = ENABLE_LOGGING # and request.controlConfig.dataTracking
     raw_audio_list, metadata_list = [], []
 
     for input_index, input_item in enumerate(request.audio):
@@ -118,20 +118,25 @@ async def inference(request: InferenceRequest, response: Response):
             input_index = i*STANDARD_BATCH_SIZE + item_index
 
             # Convert intermediate format to final format
-            result = InferenceResult(
-                input_id=metadata_list[input_index]["input_id"],
-                transcript=Transcript(raw=result_json["transcript"], itn=result_json["transcript_itn"]),
-                intent=Intent(recommended_tag=result_json["intent"], original_tag=result_json["intent_orig"], probability=float(result_json["intent_prob"])),
-                entities=[
-                    Entity(
-                        tag=entity["entity"],
-                        substring=entity["word"],
-                        start_index=entity["start"],
-                        end_index=entity["end"],
-                        extracted_value=entity["value"]
-                    ) for entity in result_json["entities"]
-                ]
-            )
+            if "tag_entities" in request.config.postProcessors:
+                result = InferenceResult(
+                    id=metadata_list[input_index]["input_id"],
+                    source=result_json["transcript"],
+                    entities=[
+                        Entity(
+                            entity=entity["entity"],
+                            word=entity["word"],
+                            start=entity["start"],
+                            end=entity["end"],
+                            value=entity["value"]
+                        ) for entity in result_json["entities"]
+                    ],
+                    intent=result_json["intent"]
+                )
+            else:
+                result = InferenceResult(
+                    id=metadata_list[input_index]["input_id"],
+                    source=result_json["transcript"])
             final_results.append(result)
 
             if enable_logging:
