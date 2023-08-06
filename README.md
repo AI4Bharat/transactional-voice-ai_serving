@@ -2,7 +2,7 @@
 
 <p align="center"><u>Modular</u>, <u>Scalable</u> and  <u>Optimized</u> deployment code for all the Transactional Voice AI modules namely Automatic Speech Recognition (ASR), Inverse Text Normalization (ITN), Intent and Entity Recognition using <a href="https://github.com/triton-inference-server/server">Triton Inference Server</a> and <a href="https://github.com/tiangolo/fastapi">FastAPI</a>.</p>
 <p align="center">
-  For more info on Transactional Voice AI development codebase, refer <a href="https://ucr.docyard.ai/">here</a>.
+  For more info on Transactional Voice AI development codebase, refer <a href="https://github.com/AI4Bharat/transactional-voice-ai">here</a>.
   <br> <br>
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#setup">Setup</a> •
