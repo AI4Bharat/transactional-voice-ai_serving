@@ -6,8 +6,9 @@
   <br> <br>
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#setup">Setup</a> •
+  <a href="#schema">Schema</a> •
   <a href="#test">Test</a> •
-  <a href="#schema">Schema</a>
+  <a href="#benchmark">Benchmark</a>
 </p>
 
 ## Prerequisites
@@ -32,13 +33,7 @@ cp .env.example .env
 ```
 docker compose up --build
 ```
-
-## Test
-> Test the complete pipeline on a sample `.wav` file: 
-```
-cd fastapi_client/scripts
-python single_file_inference.py
-```
+_This will start two servers, one **Triton Inference Server** and its wrapper **FastAPI server** which also acts as an entrypoint to every request._ 
 
 ## Schema
 ### Payload
@@ -125,3 +120,75 @@ The server responds with the ASR transcript along with intent and entity predict
   ]
 }
 ```
+
+## Test
+
+> Test the complete pipeline using the python client on a sample `.wav` file: 
+```
+cd fastapi_client/scripts
+python single_file_inference.py
+```
+
+## Benchmark
+
+All the results shown below can be reproduced by running the following commands -
+```
+cd fastapi_client/scripts
+```
+> For Tamil language -
+```
+python benchmark_npci_concurrent.py --gt-file ../data/ta/npci_pipeline_benchmark/ta-benchmark-07-19.csv --audio-folder ../data/ta/npci_pipeline_benchmark/audio --savefile ../data/ta/npci_pipeline_benchmark/results/temp.csv --lang "ta" --batchsize 1
+```
+> For Hindi language -
+```
+python benchmark_npci_concurrent.py --gt-file ../data/hi/npci_pipeline_benchmark/hi-benchmark-v0109-fixed.csv --audio-folder ../data/hi/npci_pipeline_benchmark/audio --savefile ../data/hi/npci_pipeline_benchmark/results/temp.csv --lang "hi" --batchsize 1
+```
+> For English language -
+```
+python benchmark_npci_concurrent.py --gt-file ../data/en/npci_pipeline_benchmark/en-benchmark-v0109-fixed.csv --audio-folder ../data/en/npci_pipeline_benchmark/audio --savefile ../data/en/npci_pipeline_benchmark/results/temp.csv --lang "en" --batchsize 1
+```
+
+### Benchmark Data Statistics -
+
+> *Data Source* - NPCI's collection of samples through IVRS 
+
+> *Data Type* - **8Khz** single channel audio data, human-annotated entity/intent labels
+
+| Language | # Utterances | Total Duration (hrs) | Average length (sec) | # Entities | # Intents |
+| --- | --- | --- | --- | --- | --- |
+| en | 2584 | 9.50 | 13.23 | 2239 | 894 |
+| hi | 4411 | 8.9 | 12.88 | 2671 | 1279 |
+| ta | 665 | 1.75 | 9.48 | 676 | - |
+
+### Performance Statistics -
+> *Metrics* - Accuracy for Intent Recognition and F1 Score for Entity Recognition
+
+| Language | Intent Type | Intent Accuracy | Entity Type | Entity F1 Score |
+| --- | --- | --- | --- | --- |
+| en | p2p\_transfer | 85 | amount\_of\_money | 89 |
+|    |    |    | bank\_name | 86 |
+|    |    |    | mobile\_number | 88 |
+| hi | p2p\_transfer | 87 | amount\_of\_money | 90 |
+|    |    |    | bank\_name | 90 |
+|    |    |    | mobile\_number | 86 |
+| ta | p2p\_transfer | - | amount\_of\_money | 69 |
+|    |    |    | bank\_name | 82 |
+|    |    |    | mobile\_number | 75 |
+
+### Runtime Statistics -
+
+>*Setup* - **Single** instance of all the models loaded in GPU memory using Triton Inference Server.  
+
+_Note: Triton's pyctcdecode module has multiple CPU instances._
+
+| Lang | Hardware Type | Avg. GPU VRAM usage (GB) | Avg. GPU utilization | Avg. CPU RAM usage(GB) | Avg. CPU utilization | Total Time taken (s)/samples | Avg Latency (s) | Avg Throughput (RPS) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| en | **A100-80GB,** 16-core-110GB | 9.23 | 6.89 | 21.15 | 34.75 | 393/2584 | 1.19 | 5.92 |
+| en | **T4-16GB,** 4-core-28GB | 4.16 | 16.47 | 23 | 83.95 | 759/2584 | 2.37 | 3.25 |
+| hi | **A100-80GB,** 16-core-110GB | 11.8 | 5.19 | 22.26 | 13.48 | 968/4411 | 1.73 | 4.32 |
+| hi | **T4-16GB,** 4-core-28GB | 5.2 | 16.6 | 24.28 | 51.58 | 1483/4411 | 2.72 | 2.94 |
+| ta | **A100-80GB,** 16-core-110GB | 14.6 | 5.45 | 22.23 | 44.84 | 172/665 | 1.91 | 3.52 |
+| ta | **T4-16GB,** 4-core-28GB | 6.15 | 11.4 | 24.49 | 93.22 | 381/665 | 4.77 | 1.63 |
+
+
+_Above stats are for the end-to-end system including the FastAPI wrapper on top of Triton server._

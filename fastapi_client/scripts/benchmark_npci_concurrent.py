@@ -182,7 +182,8 @@ if __name__ == "__main__":
     print()
     # -----------------  No sorting -----------------
     raw_audio_data = [load_wav(audio) for audio in df["audios"]]
-    
+    total_audio_dur = sum(map(lambda x:len(x)/16000, raw_audio_data))
+    print(f"Total audio duration (in hrs) - {total_audio_dur/3600:.2f} | avg. duration (in s) - {total_audio_dur/len(raw_audio_data):.2f}")
     # -----------------  With sorting TODO: bug with sorting algorithm  -----------------
     # raw_audio_data = []
     # audio_lens = []
