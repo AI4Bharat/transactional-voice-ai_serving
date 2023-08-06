@@ -57,7 +57,7 @@ api = FastAPI(
     title="NPCI ASR Inference API",
     description="Backend API for communicating with ASR models",
     dependencies=[
-        Depends(AuthProvider),
+        # Depends(AuthProvider),
     ],
 )
 api.add_middleware(

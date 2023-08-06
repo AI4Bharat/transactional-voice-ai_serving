@@ -32,9 +32,16 @@ class InferenceClient:
             response = self._client.infer("pipeline_pyctc_ensemble_HI", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
         elif lang_code == "ta":
             response = self._client.infer("pipeline_pyctc_ensemble_TA", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
-        elif lang_code == "od":
-            response = self._client.infer("pipeline_pyctc_ensemble_OD", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
-
+        # elif lang_code == "or":
+        #     response = self._client.infer("pipeline_pyctc_ensemble_OR", model_version='1', inputs=inputs, request_id=str(1), outputs=outputs)
+        else:
+            return [{
+                "transcript": "",
+                "transcript_itn": "",
+                "intent": "unsupported_lang",
+                "entities": [],
+            }]
+            
         _ = response.get_response()
                 
         batch_result_asr = response.as_numpy("TRANSCRIPTS_ASR")

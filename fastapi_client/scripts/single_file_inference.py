@@ -53,7 +53,7 @@ class Client:
 
 if __name__ == "__main__":
     API_KEY = "sample_secret_key_for_demo"
-    FILENAME = f"../{lang}.wav"
+    FILENAME = f"../data/{lang}/{lang}.wav"
     LANG_CODE = f"{lang}"
     ALLOW_LOGGING_ON_SERVER = True
 
