@@ -1,8 +1,7 @@
 import math
 import io
-import soundfile as sf
 import numpy as np
-import scipy.signal as sps
+import librosa
 
 def batchify(arr, batch_size=1):
     num_batches = math.ceil(len(arr) / batch_size)
@@ -22,17 +21,6 @@ def pad_batch(batch_data):
 
 def get_raw_audio_from_file_bytes(file_bytes, standard_sampling_rate):
     file_handle = io.BytesIO(file_bytes)
-    data, sampling_rate = sf.read(file_handle)
-    data = data.tolist()
-    raw_audio = np.array(data)  # in float64
-
-    if len(raw_audio.shape) > 1:  # Stereo to mono
-        raw_audio = raw_audio.sum(axis=1) / 2
-
-    if sampling_rate != standard_sampling_rate:
-        number_of_samples = round(
-            len(raw_audio) * float(standard_sampling_rate) / sampling_rate
-        )
-        raw_audio = sps.resample(raw_audio, number_of_samples).astype("float32")
+    raw_audio, _ = librosa.load(file_handle, sr=standard_sampling_rate)
     
-    return raw_audio
+    return raw_audio.astype("float32")
