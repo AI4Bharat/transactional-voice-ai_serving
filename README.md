@@ -177,7 +177,7 @@ python benchmark_npci_concurrent.py --gt-file ../data/en/npci_pipeline_benchmark
 
 ### Runtime Statistics -
 
->*Setup1* - **Single** instance of all the models loaded in GPU memory using Triton Inference Server, except for Pyctcdecode CPU module (8 instances)
+>*Setup1 (Default)* - **Single** instance of all the models loaded in GPU memory using Triton Inference Server, except for Pyctcdecode CPU module (8 instances)
 
 
 | Lang | Hardware Type | Avg. GPU VRAM usage (GB) | Avg. GPU utilization | Avg. CPU RAM usage(GB) | Avg. CPU utilization | Total Time taken (s)/samples | Avg Latency (s) | Avg Throughput (RPS) |
