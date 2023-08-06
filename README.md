@@ -188,7 +188,8 @@ _Note: Triton's pyctcdecode module has multiple CPU instances._
 | hi | **A100-80GB,** 16-core-110GB | 11.8 | 5.19 | 22.26 | 13.48 | 968/4411 | 1.73 | 4.32 |
 | hi | **T4-16GB,** 4-core-28GB | 5.2 | 16.6 | 24.28 | 51.58 | 1483/4411 | 2.72 | 2.94 |
 | ta | **A100-80GB,** 16-core-110GB | 14.6 | 5.45 | 22.23 | 44.84 | 172/665 | 1.91 | 3.52 |
-| ta | **T4-16GB,** 4-core-28GB | 6.15 | 11.4 | 24.49 | 93.22 | 381/665 | 4.77 | 1.63 |
+| ta | **T4-16GB,** 4-core-28GB | 6.15 | 11.4 | 24.49 | 93.22 | 381/665 | 4.77 | 1.63 |   
 
+> For higher throughput values, increase the count of `instance_group` in Triton's configuration or/and scale horizontally.
 
 _Above stats are for the end-to-end system including the FastAPI wrapper on top of Triton server._
