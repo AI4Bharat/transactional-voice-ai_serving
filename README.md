@@ -87,7 +87,10 @@ The ```audioUri``` should contain a link to a wav file. Instead of an URI, one c
 The server responds with the ASR transcript along with intent and entity predictions. The intent is provided as a single string indicating the intent name, while entity is a list containing one dictionary per predicted entity giving the information regarding entity type, word, value, start and end indices.
 ```json
 {
-  "status": "SUCCESS",
+  "status": {
+    "success": true,
+    "message": ""
+  },
   "output": [
     {
       "source": "please transfer 200 rupees to mobile number 9998887776 from my sbi account",
