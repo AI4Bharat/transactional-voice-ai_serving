@@ -129,7 +129,7 @@ The server responds with the ASR transcript along with intent and entity predict
 > Test the complete pipeline using the python client on a sample `.wav` file: 
 ```
 cd fastapi_client/scripts
-python single_file_inference.py
+python single_file_inference.py <lang-code> # lang-code could be "en", "hi" or "ta"
 ```
 
 ## Benchmark
