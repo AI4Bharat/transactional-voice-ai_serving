@@ -1,6 +1,7 @@
 .env
 audio
 export/models/
+logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
