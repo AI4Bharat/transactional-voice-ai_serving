@@ -12,8 +12,6 @@ RUN git clone https://github.com/nvidia-riva/riva-asrlib-decoder &&\
     mkdir build && cd build &&\
     /tmp/cmake-3.25.1-linux-x86_64/bin/cmake -DRIVA_ASRLIB_BUILD_PYTHON_BINDINGS=NO .. &&\
     make -j 2
-COPY scripts/swig /home/swig
-RUN cd /home/swig && bash setup.sh
 RUN python -m pip install git+https://github.com/huggingface/optimum.git#egg=optimum[onnxruntime-gpu] 
 RUN pip install --no-cache-dir --force-reinstall "faster-whisper @ https://github.com/guillaumekln/faster-whisper/archive/3adcc12d0f91369446a624e33185c555facc8ed2.tar.gz" joblib charset-normalizer==3.1.0
 RUN pip uninstall -y onnxruntime && pip install --no-cache-dir onnxruntime-gpu==1.13.1 numpy==1.23.1

@@ -1,0 +1,26 @@
+name: "itn_OR"
+backend: "python"
+max_batch_size: 64
+input [
+{
+    name: "INPUT_TEXT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+}
+]
+
+output [
+{
+    name: "OUTPUT_TEXT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+    reshape: {shape: []}
+}
+]
+  
+instance_group [
+    { 
+    count: 1
+    kind: KIND_CPU 
+    }
+]
