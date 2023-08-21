@@ -6701,3 +6701,1231 @@ I0821 12:21:00.560441 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize
 I0821 12:21:00.560592 1 model_lifecycle.cc:694] successfully loaded 'entity_TA' version 1
 I0821 12:21:01.940330 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
 I0821 12:21:01.940786 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:22:01.242274 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_1 (CPU device 0)
+I0821 12:22:02.567645 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_1 (CPU device 0)
+I0821 12:22:03.852198 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_OR_0_1 (CPU device 0)
+I0821 12:22:03.852530 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_1 (CPU device 0)
+I0821 12:22:05.251645 1 onnxruntime.cc:2606] TRITONBACKEND_ModelInstanceInitialize: intent_model_onnx_0 (GPU device 0)
+E0821 12:22:05.268877 1 model_lifecycle.cc:597] failed to load 'asr_pyctc_decoder_OR' version 1: Internal: model.py does not exist in the model repository path: /models/model_repository/asr_pyctc_decoder_OR/1/model.py
+I0821 12:22:06.377804 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_postprocessor_0 (CPU device 0)
+I0821 12:22:06.378117 1 model_lifecycle.cc:694] successfully loaded 'intent_model_onnx' version 1
+I0821 12:22:10.724067 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_preprocessor_0 (CPU device 0)
+I0821 12:22:10.724229 1 model_lifecycle.cc:694] successfully loaded 'intent_postprocessor' version 1
+I0821 12:22:13.760926 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_EN_0 (CPU device 0)
+I0821 12:22:13.761269 1 model_lifecycle.cc:694] successfully loaded 'intent_preprocessor' version 1
+I0821 12:22:16.127207 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_OR_0 (CPU device 0)
+I0821 12:22:16.127376 1 model_lifecycle.cc:694] successfully loaded 'itn_EN' version 1
+I0821 12:22:16.127441 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_HI_0 (CPU device 0)
+E0821 12:22:16.127495 1 model_lifecycle.cc:597] failed to load 'itn_OR' version 1: Internal: model.py does not exist in the model repository path: /models/model_repository/itn_OR/1/model.py
+I0821 12:22:33.540593 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_TA_0 (CPU device 0)
+I0821 12:22:33.540754 1 model_lifecycle.cc:694] successfully loaded 'itn_HI' version 1
+I0821 12:22:46.030166 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_2 (CPU device 0)
+I0821 12:22:46.030335 1 model_lifecycle.cc:694] successfully loaded 'itn_TA' version 1
+I0821 12:22:47.335980 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_2 (CPU device 0)
+I0821 12:22:48.636187 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_2 (CPU device 0)
+I0821 12:22:50.003785 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_3 (CPU device 0)
+I0821 12:22:51.355599 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_3 (CPU device 0)
+I0821 12:22:52.713252 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_3 (CPU device 0)
+I0821 12:22:54.122470 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_4 (CPU device 0)
+I0821 12:22:55.463174 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_4 (CPU device 0)
+I0821 12:22:56.777786 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_4 (CPU device 0)
+I0821 12:22:58.164309 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_5 (CPU device 0)
+I0821 12:22:59.492403 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_5 (CPU device 0)
+I0821 12:23:00.818310 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_5 (CPU device 0)
+I0821 12:23:02.210577 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_6 (CPU device 0)
+I0821 12:23:03.519037 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_6 (CPU device 0)
+I0821 12:23:04.881963 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_6 (CPU device 0)
+I0821 12:23:06.223125 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_7 (CPU device 0)
+I0821 12:23:07.519045 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:23:07.521917 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_7 (CPU device 0)
+I0821 12:23:08.849987 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_7 (CPU device 0)
+I0821 12:23:08.850215 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:23:10.218472 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_HI' version 1
+E0821 12:23:10.219414 1 model_repository_manager.cc:487] Invalid argument: ensemble 'asr_pyctc_ensemble_OR' depends on 'asr_pyctc_decoder_OR' which has no loaded version
+E0821 12:23:10.219473 1 model_repository_manager.cc:487] Invalid argument: ensemble 'pipeline_pyctc_ensemble_OR' depends on 'itn_OR' which has no loaded version
+I0821 12:23:10.219544 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_EN:1
+I0821 12:23:10.219584 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_HI:1
+I0821 12:23:10.219621 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_TA:1
+I0821 12:23:10.219662 1 model_lifecycle.cc:459] loading: intent_ensemble:1
+I0821 12:23:10.219703 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_EN:1
+I0821 12:23:10.219748 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_HI:1
+I0821 12:23:10.219788 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_TA:1
+I0821 12:23:10.219861 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:23:10.219949 1 model_lifecycle.cc:694] successfully loaded 'intent_ensemble' version 1
+I0821 12:23:10.220029 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:23:10.220410 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:23:10.220461 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:23:10.220545 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:23:10.220638 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:23:10.220761 1 server.cc:563] 
++------------------+------+
+| Repository Agent | Path |
++------------------+------+
++------------------+------+
+
+I0821 12:23:10.220810 1 server.cc:590] 
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend     | Path                                                            | Config                                                                                                                                                        |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pytorch     | /opt/tritonserver/backends/pytorch/libtriton_pytorch.so         | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| python      | /opt/tritonserver/backends/python/libtriton_python.so           | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| onnxruntime | /opt/tritonserver/backends/onnxruntime/libtriton_onnxruntime.so | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:23:10.220912 1 server.cc:633] 
++----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------------+
+| Model                      | Version | Status                                                                                                                                |
++----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------------+
+| asr_am_EN                  | 1       | READY                                                                                                                                 |
+| asr_am_HI                  | 1       | READY                                                                                                                                 |
+| asr_am_OR                  | 1       | READY                                                                                                                                 |
+| asr_am_TA                  | 1       | READY                                                                                                                                 |
+| asr_preprocessor           | 1       | READY                                                                                                                                 |
+| asr_pyctc_decoder_EN       | 1       | READY                                                                                                                                 |
+| asr_pyctc_decoder_HI       | 1       | READY                                                                                                                                 |
+| asr_pyctc_decoder_OR       | 1       | UNAVAILABLE: Internal: model.py does not exist in the model repository path: /models/model_repository/asr_pyctc_decoder_OR/1/model.py |
+| asr_pyctc_decoder_TA       | 1       | READY                                                                                                                                 |
+| asr_pyctc_ensemble_EN      | 1       | READY                                                                                                                                 |
+| asr_pyctc_ensemble_HI      | 1       | READY                                                                                                                                 |
+| asr_pyctc_ensemble_TA      | 1       | READY                                                                                                                                 |
+| entity_EN                  | 1       | READY                                                                                                                                 |
+| entity_HI                  | 1       | READY                                                                                                                                 |
+| entity_OR                  | 1       | READY                                                                                                                                 |
+| entity_TA                  | 1       | READY                                                                                                                                 |
+| intent_ensemble            | 1       | READY                                                                                                                                 |
+| intent_model_onnx          | 1       | READY                                                                                                                                 |
+| intent_postprocessor       | 1       | READY                                                                                                                                 |
+| intent_preprocessor        | 1       | READY                                                                                                                                 |
+| itn_EN                     | 1       | READY                                                                                                                                 |
+| itn_HI                     | 1       | READY                                                                                                                                 |
+| itn_OR                     | 1       | UNAVAILABLE: Internal: model.py does not exist in the model repository path: /models/model_repository/itn_OR/1/model.py               |
+| itn_TA                     | 1       | READY                                                                                                                                 |
+| pipeline_pyctc_ensemble_EN | 1       | READY                                                                                                                                 |
+| pipeline_pyctc_ensemble_HI | 1       | READY                                                                                                                                 |
+| pipeline_pyctc_ensemble_TA | 1       | READY                                                                                                                                 |
++----------------------------+---------+---------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:23:10.236428 1 metrics.cc:864] Collecting metrics for GPU 0: NVIDIA A100 80GB PCIe
+I0821 12:23:10.236654 1 metrics.cc:757] Collecting CPU metrics
+I0821 12:23:10.236813 1 tritonserver.cc:2264] 
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                               |
+| server_version                   | 2.29.0                                                                                                                                                                                               |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+| model_repository_path[0]         | /models/model_repository                                                                                                                                                                             |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                            |
+| strict_model_config              | 0                                                                                                                                                                                                    |
+| rate_limit                       | OFF                                                                                                                                                                                                  |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+| cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                             |
+| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+| strict_readiness                 | 1                                                                                                                                                                                                    |
+| exit_timeout                     | 30                                                                                                                                                                                                   |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:23:10.236862 1 server.cc:264] Waiting for in-flight requests to complete.
+I0821 12:23:10.236895 1 server.cc:280] Timeout 30: Found 0 model versions that have in-flight inferences
+I0821 12:23:10.237057 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:23:10.237084 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:23:10.237210 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:23:10.237233 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:23:10.237166 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:23:10.237561 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238030 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238085 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238221 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238316 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238388 1 onnxruntime.cc:2640] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:23:10.238875 1 model_lifecycle.cc:579] successfully unloaded 'intent_ensemble' version 1
+I0821 12:23:10.239831 1 server.cc:295] All models are stopped, unloading models
+I0821 12:23:10.240005 1 server.cc:302] Timeout 30: Found 19 live models and 0 in-flight non-inference requests
+I0821 12:23:10.240227 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:23:10.240556 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.240830 1 model_lifecycle.cc:579] successfully unloaded 'asr_preprocessor' version 1
+I0821 12:23:10.249435 1 onnxruntime.cc:2586] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.250171 1 model_lifecycle.cc:579] successfully unloaded 'intent_model_onnx' version 1
+I0821 12:23:10.284605 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.284763 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.284635 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.284785 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_OR' version 1
+I0821 12:23:10.284612 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:23:10.285494 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_TA' version 1
+I0821 12:23:10.285645 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_HI' version 1
+I0821 12:23:10.290952 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_EN' version 1
+I0821 12:23:11.245304 1 server.cc:302] Timeout 29: Found 12 live models and 0 in-flight non-inference requests
+I0821 12:23:11.351904 1 model_lifecycle.cc:579] successfully unloaded 'entity_HI' version 1
+I0821 12:23:11.383192 1 model_lifecycle.cc:579] successfully unloaded 'entity_EN' version 1
+I0821 12:23:11.407574 1 model_lifecycle.cc:579] successfully unloaded 'entity_OR' version 1
+I0821 12:23:11.603183 1 model_lifecycle.cc:579] successfully unloaded 'itn_EN' version 1
+I0821 12:23:11.608613 1 model_lifecycle.cc:579] successfully unloaded 'entity_TA' version 1
+I0821 12:23:11.627083 1 model_lifecycle.cc:579] successfully unloaded 'intent_postprocessor' version 1
+I0821 12:23:11.658189 1 model_lifecycle.cc:579] successfully unloaded 'itn_TA' version 1
+I0821 12:23:11.694233 1 model_lifecycle.cc:579] successfully unloaded 'itn_HI' version 1
+I0821 12:23:11.790655 1 model_lifecycle.cc:579] successfully unloaded 'intent_preprocessor' version 1
+I0821 12:23:12.246176 1 server.cc:302] Timeout 28: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:13.246376 1 server.cc:302] Timeout 27: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:14.247054 1 server.cc:302] Timeout 26: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:15.247195 1 server.cc:302] Timeout 25: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:16.247335 1 server.cc:302] Timeout 24: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:17.247471 1 server.cc:302] Timeout 23: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:18.247633 1 server.cc:302] Timeout 22: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:19.247799 1 server.cc:302] Timeout 21: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:20.248050 1 server.cc:302] Timeout 20: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:23:20.821735 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:23:20.992109 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:23:21.248433 1 server.cc:302] Timeout 19: Found 1 live models and 0 in-flight non-inference requests
+I0821 12:23:21.256763 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:23:22.248680 1 server.cc:302] Timeout 18: Found 0 live models and 0 in-flight non-inference requests
+I0821 12:23:28.453208 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7fd4ec000000' with size 268435456
+I0821 12:23:28.453573 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+I0821 12:23:28.458769 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:23:28.458972 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:23:28.459146 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:23:28.459323 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_EN:1
+I0821 12:23:28.459503 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_HI:1
+I0821 12:23:28.459732 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_TA:1
+I0821 12:23:28.459951 1 model_lifecycle.cc:459] loading: asr_greedy_top1:1
+I0821 12:23:28.460185 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:23:28.460418 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:23:28.460656 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:23:28.460874 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:23:28.461089 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:23:28.461296 1 model_lifecycle.cc:459] loading: entity_HI:1
+W0821 12:23:28.461637 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:23:28.461849 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:23:28.462086 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:23:28.462300 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:23:28.462544 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:23:28.462766 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:23:28.462975 1 model_lifecycle.cc:459] loading: itn_HI:1
+W0821 12:23:28.463209 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:23:28.463394 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:23:28.823108 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:23:28.823163 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:23:28.823169 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:23:28.825003 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:23:28.825616 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:23:28.826094 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:23:28.826119 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:23:28.826124 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:23:28.826129 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:23:28.826178 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:23:31.332220 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:23:31.332890 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:23:31.333511 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:23:31.333547 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:23:31.333557 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:23:31.333566 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+I0821 12:23:31.333564 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:23:31.335294 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:23:31.335355 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:23:31.335372 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:23:31.335380 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+E0821 12:23:31.565468 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_EN' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_EN/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+E0821 12:23:31.756509 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_HI' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_HI/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+E0821 12:23:31.957816 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_TA' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_TA/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+I0821 12:23:31.957831 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_greedy_top1 (version 1)
+W0821 12:23:31.958502 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_greedy_top1': not supported for pytorch backend
+I0821 12:23:31.959053 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_greedy_top1'
+I0821 12:23:31.959082 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_greedy_top1'
+I0821 12:23:31.959090 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_greedy_top1'
+I0821 12:23:31.959097 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_greedy_top1'
+I0821 12:23:31.959154 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_preprocessor (version 1)
+W0821 12:23:31.959932 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_preprocessor': not supported for pytorch backend
+I0821 12:23:31.960575 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_preprocessor'
+I0821 12:23:31.960614 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_preprocessor'
+I0821 12:23:31.960625 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_preprocessor'
+I0821 12:23:31.960634 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_preprocessor'
+I0821 12:23:31.961067 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:23:34.407520 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:23:36.844076 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:23:43.340329 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_EN_0 (GPU device 0)
+I0821 12:23:45.087976 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:23:45.088427 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:23:45.088854 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:23:45.088880 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:23:45.088886 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:23:45.088891 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:23:45.088965 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:23:45.089551 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:23:45.090090 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
+I0821 12:24:23.848663 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_greedy_top1_0 (GPU device 0)
+I0821 12:24:23.849931 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_preprocessor_0 (GPU device 0)
+I0821 12:24:23.850201 1 model_lifecycle.cc:694] successfully loaded 'asr_greedy_top1' version 1
+I0821 12:24:23.854549 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_0 (CPU device 0)
+I0821 12:24:23.854809 1 model_lifecycle.cc:694] successfully loaded 'asr_preprocessor' version 1
+I0821 12:24:25.253359 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_0 (CPU device 0)
+I0821 12:24:26.551599 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_0 (CPU device 0)
+I0821 12:24:27.830814 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_EN_0 (CPU device 0)
+I0821 12:24:28.195177 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_HI_0 (CPU device 0)
+I0821 12:24:28.195366 1 model_lifecycle.cc:694] successfully loaded 'entity_EN' version 1
+I0821 12:24:28.544981 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_TA_0 (CPU device 0)
+I0821 12:24:28.545143 1 model_lifecycle.cc:694] successfully loaded 'entity_HI' version 1
+I0821 12:24:28.819997 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:24:28.820097 1 model_lifecycle.cc:694] successfully loaded 'entity_TA' version 1
+I0821 12:24:30.633812 1 onnxruntime.cc:2606] TRITONBACKEND_ModelInstanceInitialize: intent_model_onnx_0 (GPU device 0)
+I0821 12:24:30.635173 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:24:31.779718 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_postprocessor_0 (CPU device 0)
+I0821 12:24:31.780004 1 model_lifecycle.cc:694] successfully loaded 'intent_model_onnx' version 1
+I0821 12:24:35.239837 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_EN_0 (CPU device 0)
+I0821 12:24:35.240126 1 model_lifecycle.cc:694] successfully loaded 'intent_postprocessor' version 1
+I0821 12:24:37.514181 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_preprocessor_0 (CPU device 0)
+I0821 12:24:37.514456 1 model_lifecycle.cc:694] successfully loaded 'itn_EN' version 1
+I0821 12:24:40.156757 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_HI_0 (CPU device 0)
+I0821 12:24:40.156856 1 model_lifecycle.cc:694] successfully loaded 'intent_preprocessor' version 1
+I0821 12:24:56.560490 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_TA_0 (CPU device 0)
+I0821 12:24:56.560756 1 model_lifecycle.cc:694] successfully loaded 'itn_HI' version 1
+I0821 12:25:08.646958 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_1 (CPU device 0)
+I0821 12:25:08.647126 1 model_lifecycle.cc:694] successfully loaded 'itn_TA' version 1
+I0821 12:25:10.106952 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_1 (CPU device 0)
+I0821 12:25:11.460743 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_1 (CPU device 0)
+I0821 12:25:12.744161 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_2 (CPU device 0)
+I0821 12:25:14.196686 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_2 (CPU device 0)
+I0821 12:25:15.567891 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_2 (CPU device 0)
+I0821 12:25:16.909480 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_3 (CPU device 0)
+I0821 12:25:18.461303 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_3 (CPU device 0)
+I0821 12:25:19.832668 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_3 (CPU device 0)
+I0821 12:25:21.239561 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_4 (CPU device 0)
+I0821 12:25:22.678413 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_4 (CPU device 0)
+I0821 12:25:24.040446 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_4 (CPU device 0)
+I0821 12:25:25.368292 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_5 (CPU device 0)
+I0821 12:25:26.787119 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_5 (CPU device 0)
+I0821 12:25:28.166045 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_5 (CPU device 0)
+I0821 12:25:29.522340 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_6 (CPU device 0)
+I0821 12:25:31.002363 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_6 (CPU device 0)
+I0821 12:25:32.357762 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_6 (CPU device 0)
+I0821 12:25:33.672710 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_7 (CPU device 0)
+I0821 12:25:35.142198 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_7 (CPU device 0)
+I0821 12:25:35.142634 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:25:36.550977 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_7 (CPU device 0)
+I0821 12:25:36.551196 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:25:37.973053 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_TA' version 1
+E0821 12:25:37.974526 1 model_repository_manager.cc:487] Invalid argument: ensemble 'asr_greedy_ensemble_EN' depends on 'asr_greedy_decoder_EN' which has no loaded version
+E0821 12:25:37.974693 1 model_repository_manager.cc:487] Invalid argument: ensemble 'asr_greedy_ensemble_HI' depends on 'asr_greedy_decoder_HI' which has no loaded version
+E0821 12:25:37.974887 1 model_repository_manager.cc:487] Invalid argument: ensemble 'asr_greedy_ensemble_TA' depends on 'asr_greedy_decoder_TA' which has no loaded version
+E0821 12:25:37.975034 1 model_repository_manager.cc:487] Invalid argument: ensemble 'pipeline_greedy_ensemble_EN' depends on 'asr_greedy_decoder_EN' which has no loaded version
+E0821 12:25:37.975175 1 model_repository_manager.cc:487] Invalid argument: ensemble 'pipeline_greedy_ensemble_HI' depends on 'asr_greedy_decoder_HI' which has no loaded version
+E0821 12:25:37.975315 1 model_repository_manager.cc:487] Invalid argument: ensemble 'pipeline_greedy_ensemble_TA' depends on 'asr_greedy_decoder_TA' which has no loaded version
+I0821 12:25:37.975533 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_EN:1
+I0821 12:25:37.975726 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_HI:1
+I0821 12:25:37.975969 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_TA:1
+I0821 12:25:37.976259 1 model_lifecycle.cc:459] loading: intent_ensemble:1
+I0821 12:25:37.976547 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_EN:1
+I0821 12:25:37.976829 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_HI:1
+I0821 12:25:37.977116 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_TA:1
+I0821 12:25:37.977399 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:25:37.977781 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:25:37.978031 1 model_lifecycle.cc:694] successfully loaded 'intent_ensemble' version 1
+I0821 12:25:37.978167 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:25:37.978261 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:25:37.978339 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:25:37.978455 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:25:37.978738 1 server.cc:563] 
++------------------+------+
+| Repository Agent | Path |
++------------------+------+
++------------------+------+
+
+I0821 12:25:37.978832 1 server.cc:590] 
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend     | Path                                                            | Config                                                                                                                                                        |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pytorch     | /opt/tritonserver/backends/pytorch/libtriton_pytorch.so         | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| python      | /opt/tritonserver/backends/python/libtriton_python.so           | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| onnxruntime | /opt/tritonserver/backends/onnxruntime/libtriton_onnxruntime.so | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:25:37.979066 1 server.cc:633] 
++----------------------------+---------+-----------------------------------------------------------------------------+
+| Model                      | Version | Status                                                                      |
++----------------------------+---------+-----------------------------------------------------------------------------+
+| asr_am_EN                  | 1       | READY                                                                       |
+| asr_am_HI                  | 1       | READY                                                                       |
+| asr_am_TA                  | 1       | READY                                                                       |
+| asr_greedy_decoder_EN      | 1       | UNAVAILABLE: Internal: ModuleNotFoundError: No module named 'swig_decoders' |
+|                            |         |                                                                             |
+|                            |         | At:                                                                         |
+|                            |         |   /models/model_repository/asr_greedy_decoder_EN/1/model.py(3): <module>    |
+|                            |         |   <frozen importlib._bootstrap>(219): _call_with_frames_removed             |
+|                            |         |   <frozen importlib._bootstrap_external>(848): exec_module                  |
+|                            |         |   <frozen importlib._bootstrap>(686): _load_unlocked                        |
+|                            |         |   <frozen importlib._bootstrap>(975): _find_and_load_unlocked               |
+|                            |         |   <frozen importlib._bootstrap>(991): _find_and_load                        |
+| asr_greedy_decoder_HI      | 1       | UNAVAILABLE: Internal: ModuleNotFoundError: No module named 'swig_decoders' |
+|                            |         |                                                                             |
+|                            |         | At:                                                                         |
+|                            |         |   /models/model_repository/asr_greedy_decoder_HI/1/model.py(3): <module>    |
+|                            |         |   <frozen importlib._bootstrap>(219): _call_with_frames_removed             |
+|                            |         |   <frozen importlib._bootstrap_external>(848): exec_module                  |
+|                            |         |   <frozen importlib._bootstrap>(686): _load_unlocked                        |
+|                            |         |   <frozen importlib._bootstrap>(975): _find_and_load_unlocked               |
+|                            |         |   <frozen importlib._bootstrap>(991): _find_and_load                        |
+| asr_greedy_decoder_TA      | 1       | UNAVAILABLE: Internal: ModuleNotFoundError: No module named 'swig_decoders' |
+|                            |         |                                                                             |
+|                            |         | At:                                                                         |
+|                            |         |   /models/model_repository/asr_greedy_decoder_TA/1/model.py(3): <module>    |
+|                            |         |   <frozen importlib._bootstrap>(219): _call_with_frames_removed             |
+|                            |         |   <frozen importlib._bootstrap_external>(848): exec_module                  |
+|                            |         |   <frozen importlib._bootstrap>(686): _load_unlocked                        |
+|                            |         |   <frozen importlib._bootstrap>(975): _find_and_load_unlocked               |
+|                            |         |   <frozen importlib._bootstrap>(991): _find_and_load                        |
+| asr_greedy_top1            | 1       | READY                                                                       |
+| asr_preprocessor           | 1       | READY                                                                       |
+| asr_pyctc_decoder_EN       | 1       | READY                                                                       |
+| asr_pyctc_decoder_HI       | 1       | READY                                                                       |
+| asr_pyctc_decoder_TA       | 1       | READY                                                                       |
+| asr_pyctc_ensemble_EN      | 1       | READY                                                                       |
+| asr_pyctc_ensemble_HI      | 1       | READY                                                                       |
+| asr_pyctc_ensemble_TA      | 1       | READY                                                                       |
+| entity_EN                  | 1       | READY                                                                       |
+| entity_HI                  | 1       | READY                                                                       |
+| entity_TA                  | 1       | READY                                                                       |
+| intent_ensemble            | 1       | READY                                                                       |
+| intent_model_onnx          | 1       | READY                                                                       |
+| intent_postprocessor       | 1       | READY                                                                       |
+| intent_preprocessor        | 1       | READY                                                                       |
+| itn_EN                     | 1       | READY                                                                       |
+| itn_HI                     | 1       | READY                                                                       |
+| itn_TA                     | 1       | READY                                                                       |
+| pipeline_pyctc_ensemble_EN | 1       | READY                                                                       |
+| pipeline_pyctc_ensemble_HI | 1       | READY                                                                       |
+| pipeline_pyctc_ensemble_TA | 1       | READY                                                                       |
++----------------------------+---------+-----------------------------------------------------------------------------+
+
+I0821 12:25:37.995987 1 metrics.cc:864] Collecting metrics for GPU 0: NVIDIA A100 80GB PCIe
+I0821 12:25:37.996214 1 metrics.cc:757] Collecting CPU metrics
+I0821 12:25:37.996346 1 tritonserver.cc:2264] 
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                               |
+| server_version                   | 2.29.0                                                                                                                                                                                               |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+| model_repository_path[0]         | /models/model_repository                                                                                                                                                                             |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                            |
+| strict_model_config              | 0                                                                                                                                                                                                    |
+| rate_limit                       | OFF                                                                                                                                                                                                  |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+| cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                             |
+| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+| strict_readiness                 | 1                                                                                                                                                                                                    |
+| exit_timeout                     | 30                                                                                                                                                                                                   |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:25:37.996376 1 server.cc:264] Waiting for in-flight requests to complete.
+I0821 12:25:37.996408 1 server.cc:280] Timeout 30: Found 0 model versions that have in-flight inferences
+I0821 12:25:37.996709 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:25:37.996777 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:25:37.996964 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:25:37.997007 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:37.997233 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:37.997467 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:37.997824 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:37.997835 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:25:37.999284 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:25:37.999587 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.004798 1 onnxruntime.cc:2640] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:38.005282 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:25:38.007250 1 model_lifecycle.cc:579] successfully unloaded 'asr_greedy_top1' version 1
+I0821 12:25:38.008169 1 model_lifecycle.cc:579] successfully unloaded 'intent_ensemble' version 1
+I0821 12:25:38.008874 1 server.cc:295] All models are stopped, unloading models
+I0821 12:25:38.008912 1 server.cc:302] Timeout 30: Found 17 live models and 0 in-flight non-inference requests
+I0821 12:25:38.009337 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:25:38.024118 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.025650 1 model_lifecycle.cc:579] successfully unloaded 'asr_preprocessor' version 1
+I0821 12:25:38.038876 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.038873 1 onnxruntime.cc:2586] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.039086 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_HI' version 1
+I0821 12:25:38.039327 1 model_lifecycle.cc:579] successfully unloaded 'intent_model_onnx' version 1
+I0821 12:25:38.052843 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.052891 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:25:38.053106 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_EN' version 1
+I0821 12:25:38.053135 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_TA' version 1
+I0821 12:25:39.022680 1 server.cc:302] Timeout 29: Found 11 live models and 0 in-flight non-inference requests
+I0821 12:25:39.086130 1 model_lifecycle.cc:579] successfully unloaded 'itn_EN' version 1
+I0821 12:25:39.146053 1 model_lifecycle.cc:579] successfully unloaded 'entity_EN' version 1
+I0821 12:25:39.153947 1 model_lifecycle.cc:579] successfully unloaded 'itn_TA' version 1
+I0821 12:25:39.167361 1 model_lifecycle.cc:579] successfully unloaded 'entity_HI' version 1
+I0821 12:25:39.209735 1 model_lifecycle.cc:579] successfully unloaded 'entity_TA' version 1
+I0821 12:25:39.252847 1 model_lifecycle.cc:579] successfully unloaded 'itn_HI' version 1
+I0821 12:25:39.434819 1 model_lifecycle.cc:579] successfully unloaded 'intent_postprocessor' version 1
+I0821 12:25:39.468549 1 model_lifecycle.cc:579] successfully unloaded 'intent_preprocessor' version 1
+I0821 12:25:40.023027 1 server.cc:302] Timeout 28: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:41.023533 1 server.cc:302] Timeout 27: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:42.024103 1 server.cc:302] Timeout 26: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:43.024601 1 server.cc:302] Timeout 25: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:44.024791 1 server.cc:302] Timeout 24: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:45.025762 1 server.cc:302] Timeout 23: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:46.025975 1 server.cc:302] Timeout 22: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:47.026152 1 server.cc:302] Timeout 21: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:48.026360 1 server.cc:302] Timeout 20: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:49.026561 1 server.cc:302] Timeout 19: Found 3 live models and 0 in-flight non-inference requests
+I0821 12:25:49.044814 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:25:49.415208 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:25:49.534969 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:25:50.027029 1 server.cc:302] Timeout 18: Found 0 live models and 0 in-flight non-inference requests
+I0821 12:25:56.313063 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7f3b7a000000' with size 268435456
+I0821 12:25:56.313401 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+I0821 12:25:56.318765 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:25:56.318956 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:25:56.319096 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:25:56.319323 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_EN:1
+I0821 12:25:56.319483 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_HI:1
+I0821 12:25:56.319629 1 model_lifecycle.cc:459] loading: asr_greedy_decoder_TA:1
+I0821 12:25:56.319852 1 model_lifecycle.cc:459] loading: asr_greedy_top1:1
+I0821 12:25:56.320078 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:25:56.320287 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:25:56.322527 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:25:56.322830 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:25:56.323028 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:25:56.323224 1 model_lifecycle.cc:459] loading: entity_HI:1
+W0821 12:25:56.323568 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:25:56.323735 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:25:56.323924 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:25:56.324123 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:25:56.324318 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:25:56.324583 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:25:56.324795 1 model_lifecycle.cc:459] loading: itn_HI:1
+W0821 12:25:56.324981 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:25:56.325121 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:25:56.769088 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:25:56.769139 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:25:56.769148 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:25:56.771750 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:25:56.772359 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:25:56.772940 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:25:56.772964 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:25:56.772970 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:25:56.772975 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:25:56.773028 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:25:59.682088 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:25:59.682679 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:25:59.683358 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:25:59.683521 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:25:59.683763 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:25:59.683632 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:25:59.683932 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+E0821 12:25:59.934466 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_EN' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_EN/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+I0821 12:25:59.935775 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:25:59.935828 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:25:59.935834 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:25:59.935838 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+E0821 12:26:00.152920 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_HI' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_HI/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+I0821 12:26:00.153304 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:26:03.101074 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_preprocessor (version 1)
+E0821 12:26:03.101072 1 model_lifecycle.cc:597] failed to load 'asr_greedy_decoder_TA' version 1: Internal: ModuleNotFoundError: No module named 'swig_decoders'
+
+At:
+  /models/model_repository/asr_greedy_decoder_TA/1/model.py(3): <module>
+  <frozen importlib._bootstrap>(219): _call_with_frames_removed
+  <frozen importlib._bootstrap_external>(848): exec_module
+  <frozen importlib._bootstrap>(686): _load_unlocked
+  <frozen importlib._bootstrap>(975): _find_and_load_unlocked
+  <frozen importlib._bootstrap>(991): _find_and_load
+
+W0821 12:26:03.101480 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_preprocessor': not supported for pytorch backend
+I0821 12:26:03.101893 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_preprocessor'
+I0821 12:26:03.101916 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_preprocessor'
+I0821 12:26:03.101921 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_preprocessor'
+I0821 12:26:03.101926 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_preprocessor'
+I0821 12:26:03.101983 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_preprocessor_0 (GPU device 0)
+I0821 12:26:03.105278 1 model_lifecycle.cc:694] successfully loaded 'asr_preprocessor' version 1
+I0821 12:26:03.105587 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:26:05.859718 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:26:12.638274 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_EN_0 (GPU device 0)
+I0821 12:26:14.640237 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:26:14.640698 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:26:14.641139 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:26:14.641161 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:26:14.641166 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:26:14.641171 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:26:14.641241 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:26:14.641644 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
+I0821 12:26:14.641665 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:36:21.154631 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7f9976000000' with size 268435456
+I0821 12:36:21.154974 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+E0821 12:36:21.162416 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_EN contains models that are not available: asr_greedy_top1, asr_greedy_decoder_EN
+E0821 12:36:21.162902 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_HI contains models that are not available: asr_greedy_decoder_HI
+E0821 12:36:21.163240 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_OR contains models that are not available: asr_greedy_decoder_OR
+E0821 12:36:21.163548 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_TA contains models that are not available: asr_greedy_decoder_TA
+I0821 12:36:21.163916 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:36:21.164164 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:36:21.164369 1 model_lifecycle.cc:459] loading: asr_am_OR:1
+I0821 12:36:21.164591 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:36:21.164812 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:36:21.165033 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:36:21.165262 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:36:21.165468 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_OR:1
+I0821 12:36:21.165748 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:36:21.165994 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:36:21.166206 1 model_lifecycle.cc:459] loading: entity_HI:1
+I0821 12:36:21.166445 1 model_lifecycle.cc:459] loading: entity_OR:1
+W0821 12:36:21.182529 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:36:21.182825 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:36:21.183064 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:36:21.202566 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:36:21.202891 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:36:21.210483 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:36:21.218519 1 model_lifecycle.cc:459] loading: itn_HI:1
+I0821 12:36:21.218804 1 model_lifecycle.cc:459] loading: itn_OR:1
+W0821 12:36:21.219090 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:36:21.222506 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:36:21.844852 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:36:21.844926 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:36:21.844955 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:36:21.849312 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:36:21.849590 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:36:21.849832 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:36:21.850084 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0821 12:36:21.862877 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:36:21.863444 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:36:21.863843 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:36:21.863862 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:36:21.863868 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:36:21.863873 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+I0821 12:36:21.863909 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:36:21.864287 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:36:21.864819 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:36:21.864928 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:36:21.865006 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:36:21.865069 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:36:21.865147 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:36:21.865444 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:36:21.865801 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:36:21.865823 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:36:21.865828 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:36:21.865833 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:36:21.866221 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:36:24.627369 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_OR (version 1)
+W0821 12:36:24.628240 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_OR': not supported for pytorch backend
+I0821 12:36:24.628923 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_OR'
+I0821 12:36:24.629164 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_OR'
+I0821 12:36:24.629351 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_OR'
+I0821 12:36:24.629528 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_OR'
+I0821 12:36:24.630050 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:36:29.558820 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:36:31.934299 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_preprocessor (version 1)
+W0821 12:36:31.935121 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_preprocessor': not supported for pytorch backend
+I0821 12:36:31.935943 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_preprocessor'
+I0821 12:36:31.936167 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_preprocessor'
+I0821 12:36:31.936359 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_preprocessor'
+I0821 12:36:31.936558 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_preprocessor'
+I0821 12:36:31.937226 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:36:36.869141 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_EN_0 (GPU device 0)
+I0821 12:36:39.624436 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:36:39.626073 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
+I0821 12:36:41.682592 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:36:41.683898 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:36:43.715880 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:36:47.043988 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:36:47.044632 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:37:15.165321 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7f153e000000' with size 268435456
+I0821 12:37:15.165699 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+E0821 12:37:15.171066 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_EN contains models that are not available: asr_greedy_top1, asr_greedy_decoder_EN
+E0821 12:37:15.171428 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_HI contains models that are not available: asr_greedy_decoder_HI
+E0821 12:37:15.171616 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_OR contains models that are not available: asr_greedy_decoder_OR
+E0821 12:37:15.171800 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_TA contains models that are not available: asr_greedy_decoder_TA
+I0821 12:37:15.172024 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:37:15.172274 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:37:15.172498 1 model_lifecycle.cc:459] loading: asr_am_OR:1
+I0821 12:37:15.172753 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:37:15.173002 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:37:15.173269 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:37:15.173515 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:37:15.173736 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_OR:1
+I0821 12:37:15.173951 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:37:15.174206 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:37:15.174422 1 model_lifecycle.cc:459] loading: entity_HI:1
+I0821 12:37:15.174647 1 model_lifecycle.cc:459] loading: entity_OR:1
+W0821 12:37:15.180462 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:37:15.180715 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:37:15.180947 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:37:15.181223 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:37:15.181468 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:37:15.181711 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:37:15.181951 1 model_lifecycle.cc:459] loading: itn_HI:1
+I0821 12:37:15.182196 1 model_lifecycle.cc:459] loading: itn_OR:1
+W0821 12:37:15.182464 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:37:15.182668 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:37:15.833735 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:37:15.833809 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:37:15.833827 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:37:15.834141 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_OR (version 1)
+W0821 12:37:15.835417 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_OR': not supported for pytorch backend
+I0821 12:37:15.836130 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_OR'
+I0821 12:37:15.836163 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_OR'
+I0821 12:37:15.836174 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_OR'
+I0821 12:37:15.836184 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_OR'
+I0821 12:37:15.836235 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_OR_0 (GPU device 0)
+I0821 12:37:18.840211 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:37:18.840650 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:37:18.841068 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:37:18.841093 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:37:18.841099 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:37:18.841104 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:37:18.841145 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:37:18.843901 1 model_lifecycle.cc:694] successfully loaded 'asr_am_OR' version 1
+I0821 12:37:20.691813 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:37:20.761339 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:37:23.124350 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_preprocessor (version 1)
+W0821 12:37:23.124924 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_preprocessor': not supported for pytorch backend
+I0821 12:37:23.125525 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_preprocessor'
+I0821 12:37:23.125562 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_preprocessor'
+I0821 12:37:23.125571 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_preprocessor'
+I0821 12:37:23.125579 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_preprocessor'
+I0821 12:37:23.126105 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:37:25.592195 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:37:25.592796 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:37:25.593209 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:37:25.593237 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:37:25.593243 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:37:25.593248 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+I0821 12:37:25.594680 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:37:25.594719 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:37:25.594732 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:37:25.594738 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0821 12:37:26.939353 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:37:30.730340 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:37:30.730849 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:37:30.731284 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:37:30.731312 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:37:30.731318 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:37:30.731324 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:37:33.414774 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0 (CPU device 0)
+I0821 12:37:34.691978 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_preprocessor_0 (GPU device 0)
+I0821 12:37:34.692138 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:37:34.697275 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0 (CPU device 0)
+I0821 12:37:34.697605 1 model_lifecycle.cc:694] successfully loaded 'asr_preprocessor' version 1
+I0821 12:37:36.014173 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_EN_0 (GPU device 0)
+I0821 12:37:36.014362 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:37:37.856539 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:37:37.858017 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
+I0821 12:37:40.293916 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:37:40.294593 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:38:41.001881 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_EN_0 (CPU device 0)
+I0821 12:38:41.362657 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0 (CPU device 0)
+I0821 12:38:41.362817 1 model_lifecycle.cc:694] successfully loaded 'entity_EN' version 1
+I0821 12:38:42.667969 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_HI_0 (CPU device 0)
+I0821 12:38:42.668130 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:38:43.014893 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:38:43.015004 1 model_lifecycle.cc:694] successfully loaded 'entity_HI' version 1
+I0821 12:38:44.840691 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_TA_0 (CPU device 0)
+I0821 12:38:44.841936 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:38:45.152081 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_OR_0 (CPU device 0)
+I0821 12:38:45.152268 1 model_lifecycle.cc:694] successfully loaded 'entity_TA' version 1
+I0821 12:38:45.604970 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_OR_0 (CPU device 0)
+I0821 12:38:45.605318 1 model_lifecycle.cc:694] successfully loaded 'entity_OR' version 1
+I0821 12:38:47.039471 1 onnxruntime.cc:2606] TRITONBACKEND_ModelInstanceInitialize: intent_model_onnx_0 (GPU device 0)
+I0821 12:38:47.039655 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_OR' version 1
+I0821 12:38:48.244719 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_postprocessor_0 (CPU device 0)
+I0821 12:38:48.245162 1 model_lifecycle.cc:694] successfully loaded 'intent_model_onnx' version 1
+I0821 12:38:55.424357 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_preprocessor_0 (CPU device 0)
+I0821 12:38:55.424600 1 model_lifecycle.cc:694] successfully loaded 'intent_postprocessor' version 1
+I0821 12:38:59.036652 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_EN_0 (CPU device 0)
+I0821 12:38:59.036894 1 model_lifecycle.cc:694] successfully loaded 'intent_preprocessor' version 1
+I0821 12:39:01.351811 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_HI_0 (CPU device 0)
+I0821 12:39:01.351985 1 model_lifecycle.cc:694] successfully loaded 'itn_EN' version 1
+I0821 12:39:17.930234 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_OR_0 (CPU device 0)
+I0821 12:39:17.930563 1 model_lifecycle.cc:694] successfully loaded 'itn_HI' version 1
+I0821 12:39:37.425471 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_TA_0 (CPU device 0)
+I0821 12:39:37.425698 1 model_lifecycle.cc:694] successfully loaded 'itn_OR' version 1
+I0821 12:39:49.064811 1 model_lifecycle.cc:694] successfully loaded 'itn_TA' version 1
+I0821 12:39:49.066833 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_EN:1
+I0821 12:39:49.066961 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_HI:1
+I0821 12:39:49.067026 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_OR:1
+I0821 12:39:49.067077 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_TA:1
+I0821 12:39:49.067120 1 model_lifecycle.cc:459] loading: intent_ensemble:1
+I0821 12:39:49.067179 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_EN:1
+I0821 12:39:49.067234 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_HI:1
+I0821 12:39:49.067291 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_OR:1
+I0821 12:39:49.067353 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_TA:1
+I0821 12:39:49.068023 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:39:49.068101 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_OR' version 1
+I0821 12:39:49.068128 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:39:49.068162 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:39:49.068197 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:39:49.068240 1 model_lifecycle.cc:694] successfully loaded 'intent_ensemble' version 1
+I0821 12:39:49.068322 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:39:49.068375 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_OR' version 1
+I0821 12:39:49.068458 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:39:49.068599 1 server.cc:563] 
++------------------+------+
+| Repository Agent | Path |
++------------------+------+
++------------------+------+
+
+I0821 12:39:49.068681 1 server.cc:590] 
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend     | Path                                                            | Config                                                                                                                                                        |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pytorch     | /opt/tritonserver/backends/pytorch/libtriton_pytorch.so         | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| python      | /opt/tritonserver/backends/python/libtriton_python.so           | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| onnxruntime | /opt/tritonserver/backends/onnxruntime/libtriton_onnxruntime.so | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:39:49.068863 1 server.cc:633] 
++----------------------------+---------+--------+
+| Model                      | Version | Status |
++----------------------------+---------+--------+
+| asr_am_EN                  | 1       | READY  |
+| asr_am_HI                  | 1       | READY  |
+| asr_am_OR                  | 1       | READY  |
+| asr_am_TA                  | 1       | READY  |
+| asr_preprocessor           | 1       | READY  |
+| asr_pyctc_decoder_EN       | 1       | READY  |
+| asr_pyctc_decoder_HI       | 1       | READY  |
+| asr_pyctc_decoder_OR       | 1       | READY  |
+| asr_pyctc_decoder_TA       | 1       | READY  |
+| asr_pyctc_ensemble_EN      | 1       | READY  |
+| asr_pyctc_ensemble_HI      | 1       | READY  |
+| asr_pyctc_ensemble_OR      | 1       | READY  |
+| asr_pyctc_ensemble_TA      | 1       | READY  |
+| entity_EN                  | 1       | READY  |
+| entity_HI                  | 1       | READY  |
+| entity_OR                  | 1       | READY  |
+| entity_TA                  | 1       | READY  |
+| intent_ensemble            | 1       | READY  |
+| intent_model_onnx          | 1       | READY  |
+| intent_postprocessor       | 1       | READY  |
+| intent_preprocessor        | 1       | READY  |
+| itn_EN                     | 1       | READY  |
+| itn_HI                     | 1       | READY  |
+| itn_OR                     | 1       | READY  |
+| itn_TA                     | 1       | READY  |
+| pipeline_pyctc_ensemble_EN | 1       | READY  |
+| pipeline_pyctc_ensemble_HI | 1       | READY  |
+| pipeline_pyctc_ensemble_OR | 1       | READY  |
+| pipeline_pyctc_ensemble_TA | 1       | READY  |
++----------------------------+---------+--------+
+
+I0821 12:39:49.087969 1 metrics.cc:864] Collecting metrics for GPU 0: NVIDIA A100 80GB PCIe
+I0821 12:39:49.088286 1 metrics.cc:757] Collecting CPU metrics
+I0821 12:39:49.088467 1 tritonserver.cc:2264] 
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                               |
+| server_version                   | 2.29.0                                                                                                                                                                                               |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+| model_repository_path[0]         | /models/model_repository                                                                                                                                                                             |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                            |
+| strict_model_config              | 0                                                                                                                                                                                                    |
+| rate_limit                       | OFF                                                                                                                                                                                                  |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+| cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                             |
+| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+| strict_readiness                 | 1                                                                                                                                                                                                    |
+| exit_timeout                     | 30                                                                                                                                                                                                   |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:39:49.088522 1 server.cc:264] Waiting for in-flight requests to complete.
+I0821 12:39:49.088577 1 server.cc:280] Timeout 30: Found 0 model versions that have in-flight inferences
+I0821 12:39:49.088827 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:39:49.088900 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:39:49.089086 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:39:49.089136 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:39:49.089192 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:39:49.089518 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.090072 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.090184 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_OR' version 1
+I0821 12:39:49.090347 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.090410 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.090497 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.090902 1 onnxruntime.cc:2640] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:39:49.091924 1 model_lifecycle.cc:579] successfully unloaded 'intent_ensemble' version 1
+I0821 12:39:49.092141 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.092361 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:39:49.092633 1 model_lifecycle.cc:579] successfully unloaded 'asr_preprocessor' version 1
+I0821 12:39:49.092821 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_OR' version 1
+I0821 12:39:49.092951 1 server.cc:295] All models are stopped, unloading models
+I0821 12:39:49.093199 1 server.cc:302] Timeout 30: Found 19 live models and 0 in-flight non-inference requests
+I0821 12:39:49.106534 1 onnxruntime.cc:2586] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.106700 1 model_lifecycle.cc:579] successfully unloaded 'intent_model_onnx' version 1
+I0821 12:39:49.111110 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.111249 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_HI' version 1
+I0821 12:39:49.129732 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.129783 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.129821 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:39:49.129961 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_TA' version 1
+I0821 12:39:49.130029 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_EN' version 1
+I0821 12:39:49.135906 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_OR' version 1
+I0821 12:39:50.093456 1 server.cc:302] Timeout 29: Found 14 live models and 0 in-flight non-inference requests
+I0821 12:39:50.127123 1 model_lifecycle.cc:579] successfully unloaded 'entity_TA' version 1
+I0821 12:39:50.137384 1 model_lifecycle.cc:579] successfully unloaded 'entity_OR' version 1
+I0821 12:39:50.217564 1 model_lifecycle.cc:579] successfully unloaded 'entity_EN' version 1
+I0821 12:39:50.248226 1 model_lifecycle.cc:579] successfully unloaded 'itn_HI' version 1
+I0821 12:39:50.266162 1 model_lifecycle.cc:579] successfully unloaded 'itn_EN' version 1
+I0821 12:39:50.339153 1 model_lifecycle.cc:579] successfully unloaded 'itn_OR' version 1
+I0821 12:39:50.340871 1 model_lifecycle.cc:579] successfully unloaded 'itn_TA' version 1
+I0821 12:39:50.348302 1 model_lifecycle.cc:579] successfully unloaded 'entity_HI' version 1
+I0821 12:39:50.440043 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:39:50.451479 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_OR' version 1
+I0821 12:39:50.482012 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:39:50.492556 1 model_lifecycle.cc:579] successfully unloaded 'intent_preprocessor' version 1
+I0821 12:39:50.532725 1 model_lifecycle.cc:579] successfully unloaded 'intent_postprocessor' version 1
+I0821 12:39:50.604647 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:39:51.094245 1 server.cc:302] Timeout 28: Found 0 live models and 0 in-flight non-inference requests
+I0821 12:39:57.242369 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7efcf6000000' with size 268435456
+I0821 12:39:57.242759 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+E0821 12:39:57.248025 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_EN contains models that are not available: asr_greedy_top1, asr_greedy_decoder_EN
+E0821 12:39:57.248060 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_HI contains models that are not available: asr_greedy_decoder_HI
+E0821 12:39:57.248066 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_OR contains models that are not available: asr_greedy_decoder_OR
+E0821 12:39:57.248070 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_TA contains models that are not available: asr_greedy_decoder_TA
+I0821 12:39:57.248106 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:39:57.248143 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:39:57.248171 1 model_lifecycle.cc:459] loading: asr_am_OR:1
+I0821 12:39:57.248199 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:39:57.248231 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:39:57.248278 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:39:57.248312 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:39:57.248340 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_OR:1
+I0821 12:39:57.248368 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:39:57.248620 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:39:57.248781 1 model_lifecycle.cc:459] loading: entity_HI:1
+I0821 12:39:57.248894 1 model_lifecycle.cc:459] loading: entity_OR:1
+W0821 12:39:57.249196 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:39:57.249309 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:39:57.249422 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:39:57.249542 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:39:57.249743 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:39:57.249922 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:39:57.250096 1 model_lifecycle.cc:459] loading: itn_HI:1
+I0821 12:39:57.250271 1 model_lifecycle.cc:459] loading: itn_OR:1
+W0821 12:39:57.250461 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:39:57.250612 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:39:57.626656 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:39:57.626711 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:39:57.626719 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:39:57.631330 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:39:57.631381 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:39:57.631392 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:39:57.631397 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0821 12:39:57.640360 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:39:57.641050 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:39:57.641629 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:39:57.641662 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:39:57.641669 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:39:57.641673 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+I0821 12:39:57.641697 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:39:57.642014 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:39:57.642390 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:39:57.642413 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:39:57.642419 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:39:57.642425 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:39:57.642470 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:40:00.228680 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:40:00.229241 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:40:00.229792 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:40:00.229821 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:40:00.229829 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:40:00.229836 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:40:00.229994 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:40:00.230311 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:40:02.644348 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:40:05.073459 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_preprocessor (version 1)
+W0821 12:40:05.073955 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_preprocessor': not supported for pytorch backend
+I0821 12:40:05.074399 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_preprocessor'
+I0821 12:40:05.074451 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_preprocessor'
+I0821 12:40:05.074459 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_preprocessor'
+I0821 12:40:05.074464 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_preprocessor'
+I0821 12:40:05.075093 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:40:07.501498 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:40:15.246199 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_EN_0 (GPU device 0)
+I0821 12:40:16.976527 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_OR (version 1)
+W0821 12:40:16.977119 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_OR': not supported for pytorch backend
+I0821 12:40:16.977560 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_OR'
+I0821 12:40:16.977589 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_OR'
+I0821 12:40:16.977595 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_OR'
+I0821 12:40:16.977601 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_OR'
+I0821 12:40:16.977674 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
+I0821 12:40:16.977712 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:40:16.978338 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
+I0821 12:41:16.698656 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:41:18.399740 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_OR_0 (CPU device 0)
+I0821 12:41:18.401238 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:41:19.845927 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0 (CPU device 0)
+I0821 12:41:19.846096 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_OR' version 1
+I0821 12:41:21.156125 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_preprocessor_0 (GPU device 0)
+I0821 12:41:21.156262 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:41:21.161069 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0 (CPU device 0)
+I0821 12:41:21.161438 1 model_lifecycle.cc:694] successfully loaded 'asr_preprocessor' version 1
+I0821 12:41:22.526987 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0 (CPU device 0)
+I0821 12:41:22.527414 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:41:23.874402 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_EN_0 (CPU device 0)
+I0821 12:41:23.874729 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:41:24.218821 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_HI_0 (CPU device 0)
+I0821 12:41:24.218977 1 model_lifecycle.cc:694] successfully loaded 'entity_EN' version 1
+I0821 12:41:24.566914 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_OR_0 (CPU device 0)
+I0821 12:41:24.567020 1 model_lifecycle.cc:694] successfully loaded 'entity_HI' version 1
+I0821 12:41:25.007633 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_TA_0 (CPU device 0)
+I0821 12:41:25.007808 1 model_lifecycle.cc:694] successfully loaded 'entity_OR' version 1
+I0821 12:41:25.298187 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_OR_0 (GPU device 0)
+I0821 12:41:25.298347 1 model_lifecycle.cc:694] successfully loaded 'entity_TA' version 1
+I0821 12:41:26.951385 1 onnxruntime.cc:2606] TRITONBACKEND_ModelInstanceInitialize: intent_model_onnx_0 (GPU device 0)
+I0821 12:41:26.952815 1 model_lifecycle.cc:694] successfully loaded 'asr_am_OR' version 1
+I0821 12:41:28.064291 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_postprocessor_0 (CPU device 0)
+I0821 12:41:28.064627 1 model_lifecycle.cc:694] successfully loaded 'intent_model_onnx' version 1
+I0821 12:41:31.100745 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: intent_preprocessor_0 (CPU device 0)
+I0821 12:41:31.100981 1 model_lifecycle.cc:694] successfully loaded 'intent_postprocessor' version 1
+I0821 12:41:33.819227 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_EN_0 (CPU device 0)
+I0821 12:41:33.819841 1 model_lifecycle.cc:694] successfully loaded 'intent_preprocessor' version 1
+I0821 12:41:36.120615 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_OR_0 (CPU device 0)
+I0821 12:41:36.120832 1 model_lifecycle.cc:694] successfully loaded 'itn_EN' version 1
+I0821 12:41:55.199688 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_HI_0 (CPU device 0)
+I0821 12:41:55.199857 1 model_lifecycle.cc:694] successfully loaded 'itn_OR' version 1
+I0821 12:42:11.259931 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: itn_TA_0 (CPU device 0)
+I0821 12:42:11.260135 1 model_lifecycle.cc:694] successfully loaded 'itn_HI' version 1
+I0821 12:42:22.946047 1 model_lifecycle.cc:694] successfully loaded 'itn_TA' version 1
+I0821 12:42:22.947531 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_EN:1
+I0821 12:42:22.947622 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_HI:1
+I0821 12:42:22.947670 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_OR:1
+I0821 12:42:22.947706 1 model_lifecycle.cc:459] loading: asr_pyctc_ensemble_TA:1
+I0821 12:42:22.947754 1 model_lifecycle.cc:459] loading: intent_ensemble:1
+I0821 12:42:22.947793 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_EN:1
+I0821 12:42:22.947829 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_HI:1
+I0821 12:42:22.947866 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_OR:1
+I0821 12:42:22.947910 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:42:22.948011 1 model_lifecycle.cc:459] loading: pipeline_pyctc_ensemble_TA:1
+I0821 12:42:22.948068 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:42:22.948132 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_OR' version 1
+I0821 12:42:22.948428 1 model_lifecycle.cc:694] successfully loaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:42:22.948523 1 model_lifecycle.cc:694] successfully loaded 'intent_ensemble' version 1
+I0821 12:42:22.948597 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:42:22.948709 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:42:22.948751 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:42:22.948803 1 model_lifecycle.cc:694] successfully loaded 'pipeline_pyctc_ensemble_OR' version 1
+I0821 12:42:22.948903 1 server.cc:563] 
++------------------+------+
+| Repository Agent | Path |
++------------------+------+
++------------------+------+
+
+I0821 12:42:22.948951 1 server.cc:590] 
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Backend     | Path                                                            | Config                                                                                                                                                        |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pytorch     | /opt/tritonserver/backends/pytorch/libtriton_pytorch.so         | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| python      | /opt/tritonserver/backends/python/libtriton_python.so           | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
+| onnxruntime | /opt/tritonserver/backends/onnxruntime/libtriton_onnxruntime.so | {"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}} |
++-------------+-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:42:22.949047 1 server.cc:633] 
++----------------------------+---------+--------+
+| Model                      | Version | Status |
++----------------------------+---------+--------+
+| asr_am_EN                  | 1       | READY  |
+| asr_am_HI                  | 1       | READY  |
+| asr_am_OR                  | 1       | READY  |
+| asr_am_TA                  | 1       | READY  |
+| asr_preprocessor           | 1       | READY  |
+| asr_pyctc_decoder_EN       | 1       | READY  |
+| asr_pyctc_decoder_HI       | 1       | READY  |
+| asr_pyctc_decoder_OR       | 1       | READY  |
+| asr_pyctc_decoder_TA       | 1       | READY  |
+| asr_pyctc_ensemble_EN      | 1       | READY  |
+| asr_pyctc_ensemble_HI      | 1       | READY  |
+| asr_pyctc_ensemble_OR      | 1       | READY  |
+| asr_pyctc_ensemble_TA      | 1       | READY  |
+| entity_EN                  | 1       | READY  |
+| entity_HI                  | 1       | READY  |
+| entity_OR                  | 1       | READY  |
+| entity_TA                  | 1       | READY  |
+| intent_ensemble            | 1       | READY  |
+| intent_model_onnx          | 1       | READY  |
+| intent_postprocessor       | 1       | READY  |
+| intent_preprocessor        | 1       | READY  |
+| itn_EN                     | 1       | READY  |
+| itn_HI                     | 1       | READY  |
+| itn_OR                     | 1       | READY  |
+| itn_TA                     | 1       | READY  |
+| pipeline_pyctc_ensemble_EN | 1       | READY  |
+| pipeline_pyctc_ensemble_HI | 1       | READY  |
+| pipeline_pyctc_ensemble_OR | 1       | READY  |
+| pipeline_pyctc_ensemble_TA | 1       | READY  |
++----------------------------+---------+--------+
+
+I0821 12:42:22.964199 1 metrics.cc:864] Collecting metrics for GPU 0: NVIDIA A100 80GB PCIe
+I0821 12:42:22.964428 1 metrics.cc:757] Collecting CPU metrics
+I0821 12:42:22.964583 1 tritonserver.cc:2264] 
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Option                           | Value                                                                                                                                                                                                |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_id                        | triton                                                                                                                                                                                               |
+| server_version                   | 2.29.0                                                                                                                                                                                               |
+| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+| model_repository_path[0]         | /models/model_repository                                                                                                                                                                             |
+| model_control_mode               | MODE_NONE                                                                                                                                                                                            |
+| strict_model_config              | 0                                                                                                                                                                                                    |
+| rate_limit                       | OFF                                                                                                                                                                                                  |
+| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+| cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                             |
+| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+| strict_readiness                 | 1                                                                                                                                                                                                    |
+| exit_timeout                     | 30                                                                                                                                                                                                   |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+I0821 12:42:22.964618 1 server.cc:264] Waiting for in-flight requests to complete.
+I0821 12:42:22.964663 1 server.cc:280] Timeout 30: Found 0 model versions that have in-flight inferences
+I0821 12:42:22.964826 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_HI' version 1
+I0821 12:42:22.964844 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_EN' version 1
+I0821 12:42:22.965031 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_EN' version 1
+I0821 12:42:22.965060 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.964849 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_TA' version 1
+I0821 12:42:22.965447 1 model_lifecycle.cc:579] successfully unloaded 'pipeline_pyctc_ensemble_OR' version 1
+I0821 12:42:22.965458 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.964927 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_HI' version 1
+I0821 12:42:22.966000 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:22.975023 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.979866 1 model_lifecycle.cc:579] successfully unloaded 'asr_preprocessor' version 1
+I0821 12:42:22.980015 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.980311 1 onnxruntime.cc:2640] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.980452 1 libtorch.cc:2112] TRITONBACKEND_ModelInstanceFinalize: delete instance state
+I0821 12:42:22.981227 1 model_lifecycle.cc:579] successfully unloaded 'intent_ensemble' version 1
+I0821 12:42:22.981720 1 server.cc:295] All models are stopped, unloading models
+I0821 12:42:22.981767 1 server.cc:302] Timeout 30: Found 21 live models and 0 in-flight non-inference requests
+I0821 12:42:22.982302 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_OR' version 1
+I0821 12:42:22.982572 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_ensemble_TA' version 1
+I0821 12:42:22.986195 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:22.991869 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_TA' version 1
+I0821 12:42:22.994507 1 onnxruntime.cc:2586] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:22.994669 1 model_lifecycle.cc:579] successfully unloaded 'intent_model_onnx' version 1
+I0821 12:42:23.023997 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:23.024001 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:23.024106 1 libtorch.cc:2057] TRITONBACKEND_ModelFinalize: delete model state
+I0821 12:42:23.024198 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_EN' version 1
+I0821 12:42:23.024250 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_HI' version 1
+I0821 12:42:23.024423 1 model_lifecycle.cc:579] successfully unloaded 'asr_am_OR' version 1
+I0821 12:42:23.981963 1 server.cc:302] Timeout 29: Found 14 live models and 0 in-flight non-inference requests
+I0821 12:42:24.047987 1 model_lifecycle.cc:579] successfully unloaded 'entity_EN' version 1
+I0821 12:42:24.101138 1 model_lifecycle.cc:579] successfully unloaded 'entity_HI' version 1
+I0821 12:42:24.137967 1 model_lifecycle.cc:579] successfully unloaded 'entity_OR' version 1
+I0821 12:42:24.139117 1 model_lifecycle.cc:579] successfully unloaded 'itn_EN' version 1
+I0821 12:42:24.155993 1 model_lifecycle.cc:579] successfully unloaded 'itn_TA' version 1
+I0821 12:42:24.177172 1 model_lifecycle.cc:579] successfully unloaded 'itn_OR' version 1
+I0821 12:42:24.263481 1 model_lifecycle.cc:579] successfully unloaded 'entity_TA' version 1
+I0821 12:42:24.291493 1 model_lifecycle.cc:579] successfully unloaded 'itn_HI' version 1
+I0821 12:42:24.322245 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_HI' version 1
+I0821 12:42:24.346896 1 model_lifecycle.cc:579] successfully unloaded 'intent_postprocessor' version 1
+I0821 12:42:24.386088 1 model_lifecycle.cc:579] successfully unloaded 'intent_preprocessor' version 1
+I0821 12:42:24.440346 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_EN' version 1
+I0821 12:42:24.448528 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_TA' version 1
+I0821 12:42:24.531731 1 model_lifecycle.cc:579] successfully unloaded 'asr_pyctc_decoder_OR' version 1
+I0821 12:42:24.982754 1 server.cc:302] Timeout 28: Found 0 live models and 0 in-flight non-inference requests
+I0821 12:42:31.101383 1 pinned_memory_manager.cc:240] Pinned memory pool is created at '0x7ff5aa000000' with size 268435456
+I0821 12:42:31.101807 1 cuda_memory_manager.cc:105] CUDA memory pool is created on device 0 with size 67108864
+E0821 12:42:31.107194 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_EN contains models that are not available: asr_greedy_top1, asr_greedy_decoder_EN
+E0821 12:42:31.107362 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_HI contains models that are not available: asr_greedy_decoder_HI
+E0821 12:42:31.107636 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_OR contains models that are not available: asr_greedy_decoder_OR
+E0821 12:42:31.107816 1 model_repository_manager.cc:487] Invalid argument: ensemble pipeline_greedy_ensemble_TA contains models that are not available: asr_greedy_decoder_TA
+I0821 12:42:31.108037 1 model_lifecycle.cc:459] loading: asr_am_EN:1
+I0821 12:42:31.108268 1 model_lifecycle.cc:459] loading: asr_am_HI:1
+I0821 12:42:31.108483 1 model_lifecycle.cc:459] loading: asr_am_OR:1
+I0821 12:42:31.108741 1 model_lifecycle.cc:459] loading: asr_am_TA:1
+I0821 12:42:31.108986 1 model_lifecycle.cc:459] loading: asr_preprocessor:1
+I0821 12:42:31.109221 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_EN:1
+I0821 12:42:31.109449 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_HI:1
+I0821 12:42:31.109673 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_OR:1
+I0821 12:42:31.109891 1 model_lifecycle.cc:459] loading: asr_pyctc_decoder_TA:1
+I0821 12:42:31.110109 1 model_lifecycle.cc:459] loading: entity_EN:1
+I0821 12:42:31.110324 1 model_lifecycle.cc:459] loading: entity_HI:1
+I0821 12:42:31.110563 1 model_lifecycle.cc:459] loading: entity_OR:1
+W0821 12:42:31.110926 1 model_lifecycle.cc:107] ignore version directory 'entity_EN' which fails to convert to integral number
+I0821 12:42:31.111141 1 model_lifecycle.cc:459] loading: entity_TA:1
+I0821 12:42:31.111371 1 model_lifecycle.cc:459] loading: intent_model_onnx:1
+I0821 12:42:31.111714 1 model_lifecycle.cc:459] loading: intent_postprocessor:1
+I0821 12:42:31.112050 1 model_lifecycle.cc:459] loading: intent_preprocessor:1
+I0821 12:42:31.112275 1 model_lifecycle.cc:459] loading: itn_EN:1
+I0821 12:42:31.112518 1 model_lifecycle.cc:459] loading: itn_HI:1
+I0821 12:42:31.112754 1 model_lifecycle.cc:459] loading: itn_OR:1
+W0821 12:42:31.112999 1 model_lifecycle.cc:107] ignore version directory 'itn_EN' which fails to convert to integral number
+I0821 12:42:31.113204 1 model_lifecycle.cc:459] loading: itn_TA:1
+I0821 12:42:31.488457 1 libtorch.cc:1985] TRITONBACKEND_Initialize: pytorch
+I0821 12:42:31.488519 1 libtorch.cc:1995] Triton TRITONBACKEND API version: 1.10
+I0821 12:42:31.488535 1 libtorch.cc:2001] 'pytorch' TRITONBACKEND API version: 1.10
+I0821 12:42:31.491822 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:42:31.491861 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:42:31.491868 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:42:31.491872 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0821 12:42:31.500962 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_EN (version 1)
+W0821 12:42:31.501905 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_EN': not supported for pytorch backend
+I0821 12:42:31.502780 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_EN'
+I0821 12:42:31.502808 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_EN'
+I0821 12:42:31.502817 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_EN'
+I0821 12:42:31.502825 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_EN'
+I0821 12:42:31.502875 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_HI (version 1)
+W0821 12:42:31.503216 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_HI': not supported for pytorch backend
+I0821 12:42:31.503749 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_HI'
+I0821 12:42:31.503868 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_HI'
+I0821 12:42:31.504070 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_HI'
+I0821 12:42:31.504215 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_HI'
+I0821 12:42:31.504355 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:42:34.141821 1 libtorch.cc:2034] TRITONBACKEND_ModelInitialize: asr_am_TA (version 1)
+W0821 12:42:34.142405 1 libtorch.cc:284] skipping model configuration auto-complete for 'asr_am_TA': not supported for pytorch backend
+I0821 12:42:34.143038 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:42:34.143289 1 libtorch.cc:313] Optimized execution is enabled for model instance 'asr_am_TA'
+I0821 12:42:34.143419 1 libtorch.cc:332] Cache Cleaning is disabled for model instance 'asr_am_TA'
+I0821 12:42:34.143521 1 libtorch.cc:349] Inference Mode is disabled for model instance 'asr_am_TA'
+I0821 12:42:34.143621 1 libtorch.cc:444] NvFuser is not specified for model instance 'asr_am_TA'
+I0821 12:42:34.143765 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:42:35.849240 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:42:35.849869 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:42:38.370786 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:42:40.821154 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:42:43.248745 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
