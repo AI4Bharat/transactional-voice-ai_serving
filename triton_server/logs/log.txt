@@ -6675,3 +6675,29 @@ I0821 12:20:34.316855 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize:
 I0821 12:20:34.320071 1 model_lifecycle.cc:694] successfully loaded 'asr_am_EN' version 1
 I0821 12:20:36.021578 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
 I0821 12:20:36.022536 1 model_lifecycle.cc:694] successfully loaded 'asr_am_OR' version 1
+I0821 12:20:38.463454 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_HI_0 (GPU device 0)
+I0821 12:20:40.360679 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:20:40.361441 1 model_lifecycle.cc:694] successfully loaded 'asr_am_HI' version 1
+I0821 12:20:42.807566 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:20:45.294191 1 python_be.cc:1537] Input tensors can be both in CPU and GPU. FORCE_CPU_ONLY_INPUT_TENSORS is off.
+I0821 12:20:53.173401 1 libtorch.cc:2078] TRITONBACKEND_ModelInstanceInitialize: asr_am_TA_0 (GPU device 0)
+I0821 12:20:55.064131 1 onnxruntime.cc:2459] TRITONBACKEND_Initialize: onnxruntime
+I0821 12:20:55.064206 1 onnxruntime.cc:2469] Triton TRITONBACKEND API version: 1.10
+I0821 12:20:55.064218 1 onnxruntime.cc:2475] 'onnxruntime' TRITONBACKEND API version: 1.10
+I0821 12:20:55.064224 1 onnxruntime.cc:2505] backend configuration:
+{"cmdline":{"auto-complete-config":"true","min-compute-capability":"6.000000","backend-directory":"/opt/tritonserver/backends","default-max-batch-size":"4"}}
+I0821 12:20:55.065185 1 model_lifecycle.cc:694] successfully loaded 'asr_am_TA' version 1
+I0821 12:20:55.073142 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_EN_0_0 (CPU device 0)
+I0821 12:20:56.419241 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_TA_0_0 (CPU device 0)
+I0821 12:20:57.696875 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_OR_0_0 (CPU device 0)
+I0821 12:20:59.150217 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_HI_0 (CPU device 0)
+I0821 12:20:59.485223 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_EN_0 (CPU device 0)
+I0821 12:20:59.485372 1 model_lifecycle.cc:694] successfully loaded 'entity_HI' version 1
+I0821 12:20:59.798392 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_OR_0 (CPU device 0)
+I0821 12:20:59.798589 1 model_lifecycle.cc:694] successfully loaded 'entity_EN' version 1
+I0821 12:21:00.254370 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: entity_TA_0 (CPU device 0)
+I0821 12:21:00.254522 1 model_lifecycle.cc:694] successfully loaded 'entity_OR' version 1
+I0821 12:21:00.560441 1 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: asr_pyctc_decoder_HI_0_0 (CPU device 0)
+I0821 12:21:00.560592 1 model_lifecycle.cc:694] successfully loaded 'entity_TA' version 1
+I0821 12:21:01.940330 1 onnxruntime.cc:2563] TRITONBACKEND_ModelInitialize: intent_model_onnx (version 1)
+I0821 12:21:01.940786 1 onnxruntime.cc:666] skipping model configuration auto-complete for 'intent_model_onnx': inputs and outputs already specified
