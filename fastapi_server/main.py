@@ -141,7 +141,7 @@ async def inference(request: InferenceRequest, response: Response):
 
             if enable_logging:
                 metadata_list[input_index]["result"] = result.model_dump(mode="json")
-                del metadata_list[input_index]["result"]["input_id"] # Remove redundant field
+                # del metadata_list[input_index]["result"]["input_id"] # Remove redundant field
                 metadata_blob_path = f"{metadata['input_id']}/metadata.json"
                 blob_client = blob_service_client.get_blob_client(container=AZURE_BLOB_CONTAINER, blob=metadata_blob_path)
                 blob_client.upload_blob(json.dumps(metadata_list[input_index], indent=4))
