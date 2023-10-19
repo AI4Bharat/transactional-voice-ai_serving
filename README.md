@@ -1,4 +1,4 @@
-<h1 align="center">Transcational Voice AI <i>(Serving)</i> </h1>
+<h1 align="center">Transactional Voice AI <i>(Serving)</i> </h1>
 
 <p align="center"><u>Modular</u>, <u>Scalable</u> and  <u>Optimized</u> deployment code for all the Transactional Voice AI modules namely Automatic Speech Recognition (ASR), Inverse Text Normalization (ITN), Intent and Entity Recognition using <a href="https://github.com/triton-inference-server/server">Triton Inference Server</a> and <a href="https://github.com/tiangolo/fastapi">FastAPI</a>.</p>
 <p align="center">
